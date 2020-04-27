@@ -1,4 +1,3 @@
-
 # Basic GIT commands
 
 ## Installing GIT :
@@ -6,9 +5,13 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 
 ## Basic Notions :
 ```commit``` = snapshot of the project at a given time
+
 ```master``` = master branch where are the final solutions
+
 ```branch``` = pointer to a specific commit 
+
 ```merge``` = combines work from two different branches together. Merging creates "a special commit" which has 2 unique parents.
+
 ```rebase``` = combines branches, copying a set of commits and plops them down somewhere else. Advantage: a nice linear sequence of commits 
 
 ```HEAD``` = symbolic name for the currently checked out commit. HEAD always points to the most recent commit which is reflected in the working tree. Normally, HEAD points to a branch name. When you commit, the status of branch is altered and this change is visible through HEAD. Sometimes, HEAD is hiding under master.
@@ -22,10 +25,11 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 ##### Create a new local empty repository :
     git init
 ##### Checkout a repository :
-- local : 
-        ```git clone /path/to/repository```
+- local :  
+    ``` git clone /path/to/repository ```
 - from a remote server :  
-        ```git clone user@host:/path/to/repository``` 
+    ``` git clone user@host:/path/to/repository ``` 
+
 ##### Add files (adding files to staging (index)): 
     git add <filename>
     git add *  
