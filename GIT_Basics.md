@@ -92,7 +92,7 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
     git checkout HEAD~^2~2   => HEAD goes back one commit, then select second parent, then go back 2 commits
 ##### Reset changes (reverts changes by moving a branch reference backwards in time to an older commit - "rewriting history", like the actual commit never happend ) : 
     git reset HEAD~1
-###### IMPORTANT:  git reset is working only on the local branches, but doesn't work for remote branches that others are using.  
+###### ```IMPORTANT:  git reset is working only on the local branches, but it doesn't work for remote branches.``` 
 ##### Revert changes on remote branch (creates a new commit c' to introduce changes that exactly reverses the commit of c): 
     git revert HEAD
 ##### List all remote branches on the remote repository : 
