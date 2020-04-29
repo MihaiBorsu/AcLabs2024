@@ -84,6 +84,14 @@ https://wiki.bash-hackers.org/syntax/pe
     echo ${STR^}   #=> "Hello world!" (uppercase 1st letter)
     echo ${STR^^}  #=> "HELLO WORLD!" (all uppercase)
 
+    # ${FOO%suffix}	Remove suffix
+    # ${FOO#prefix}	Remove prefix
+    # ${FOO%%suffix}	Remove long suffix
+    # ${FOO##prefix}	Remove long prefix
+    # ${FOO/from/to}	Replace first match
+    # ${FOO//from/to}	Replace all
+    # ${FOO/%from/to}	Replace suffix
+    # ${FOO/#from/to}	Replace prefix
 
 
 ##### LÖÖPS BRØTHER
