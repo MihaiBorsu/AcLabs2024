@@ -1,0 +1,239 @@
+Git 
+--------------
+  = Version Control System (VCS)
+  - snapshots - files stored by content, directories stored as a list of entries, point in time stored as a "commit", has a pointer to the root directory entry 
+               - all indexed by SHA-1
+
+ http://git-scm.com
+
+Basic Configuration
+----------------------
+
+    #git config --global user.name 'Dima Ciprian'    => set user for git global to be configured for all git projects on the computer
+    #git config --global user.email "ciprian.dima@nokia.com" => set email address in git
+
+    #git config -l   => list all values
+
+    #git commit   => it will go by default in #vi 
+    #git config --global core.editor emacs  => it will change to emacs from default vi 
+
+    For windows => use as default editor gitpad.exe 
+
+Creating Repo
+-----------------------
+     #git init project => it will create a project directory as git repo 
+     #cd project 
+     #tree .git         => see all the tree
+
+     #git init --bare barerepo    =>> a git repo without working directory. it is used for multi-developers to share the work 
+     #tree barerepo      => same as a git repo tree above 
+
+ Git clone
+ -----------------------
+
+     #git clone https://...../git.git 
+     #cd hubot.git
+     
+     # git log --oneline --graph   => show entire git history 
+
+Git fundamentals
+------------------------
+   there are 3 levels each of the level overwrites the last : 
+     - system level /etc or similar
+     - global level ~/.gitconfig 
+     - local .git/config
+
+   #git config -e --global    (-e = edit)  - edit global settings   => add a variable 
+      [fetch]   
+      prune=true
+   #git config fetch.prune  => true   
+   #git config -e --local     => add 
+    [core] 
+    editor = emacs   => setup emacs as editor 
+   #git config core.editor   => emacs will be as editor 
+
+ Git Aliases
+ ----------------------------- 
+  #git config --global alias.lg 'log --graph --oneline --decorate'
+  #git lg 
+  #git config --global alias.lga 'log --graph --oneline --decorate --all'
+  #git lga
+  
+  #git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'" 
+
+  #git config --global 
+   [alias]
+     lg = log --graph --oneline --decorate
+     lga = log --graph --oneline --decorate --all
+     lol = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=relative            => shows how long a ago a commit was done and who wrote it
+     lola = !git lol --all && 0      => ! - opens a new git subshell and execute the command afterwards ,  && 0 = ensure that the commands always succeeds and not to get an error 
+
+Git statuses
+------------------------------
+ - you have 2 files : file1 files2 and file1 is known by git and file2 is not known
+  
+ #git status   => shows file2 as untracked
+ #git add file2  => stage the file2, adding it to the index
+ #git status   => shows new file2 
+
+ A file can be in 2 state : in modified state and in stage state.
+
+ #git gui   => open gui panel 
+ #git status -sb   => -s = summary, -b = branch  (color: green = staged, red = unstaged)
+ 
+ #git config --global alias.st 'status -sb'
+ #alias gs='git st'    => git status alias
+
+ Basic commiting
+ ------------------------------
+  #git status
+  #git add file1
+  #git commit    => add your message in vi 
+  #git commit -m 'mesage'
+  #git reset clean 
+
+  
+  #git commit -av   => -a = all changes , v = verbose ....it shows inside commit even the difference 
+  #man git-commit   => to see the help 
+
+  Advanced committing 
+  ---------------------------
+  The index let you stage different parts of the file 
+    #git add --patch   or -p   (-p =patch) => you can have 2 different diffs in files and commit only one of them ... it is interactive question. The differences are called "hunks".
+    #git status     => the same file is in stage state and in modified state
+    #git commit -v  => commit the part from stage state 
+    #git status     => it will remain the part of the file that it's in modified state
+    #git diff       => shows the diff
+    #git commit -av => commit the modification now
+    #git gui        => you can do the same commands as above 
+
+  View history      
+ -------------------------------
+   #git log 
+   #git log --graph    => shows the graph but with all info of history 
+   #git log --graph --oneline  => shows to see the big picture of history, but doesn't show tags, branches
+   #git log --graph --oneline --decorate => shows now the branches with names, tags. You see here history of HEAD
+   #git log --graph --oneline --decorate --all   => --all flags, you will see all branches, all references, and not only the HEAD history 
+   #git show <sha1>  => shows the commit information 
+   #gitk --all       => graphical of the git log command 
+
+  Renaming and deleting files
+  -----------------------------
+  - git doesn't have tracking for moving or renaming files
+
+  #git mv file1 file2   => rename the file1 to be file2 and staging the index 
+  #git diff --cached    => shows the difference that are also in index and not in the working directory. It shows the file1 was deleted and file2 is new.
+  #vi file2   => add some text 
+  #git add file2 
+  #git status    => it will show you that the file2 is a new file
+
+  #ls 
+  file1          => file1 is already tracked inside git
+  #mv file2 file1
+  #git status           => file1 is deleted and file2 is untracked
+  #git add file1 file2  => add to stage both files 
+  #git status           => recognized the the file1 is renamed into file2       
+  
+
+  #git rm file1  => to delete file1 from working directory and staged the change that deleted it
+
+  Ignore files
+  --------------------------------
+  #vi .gitignore       
+   --> add the name of file  . gitignore is functioning all the way up to any subdirectory
+  #git status           
+
+  - you can use wildcards :
+      -  [aB]  => it will ignore files having a or B  
+      - * = all   Example: *.suo 
+
+  Another method offered by git is exclude files. The syntax is the same as gitignore file :    
+   #cat .git/info/exclude 
+
+  You can configure a global exclude file : 
+   #git config core.excludesfile     => it will create a gitexcludes file in the user home directory
+   #cat ~/.gitexcludes               => you can add names of the files to excluded for all git repos 
+     .DB_Store
+     Thumbs.db  
+
+ ===================================================================================================
+ Branches
+ ===================================================================================================
+ 
+  Long way to create branch :
+   #git branch test 
+   #git checkout test
+  Short way : 
+   #git checkout -b test 
+
+ Merge
+ ---------
+  Regular merge :
+  -----------------
+  Note: Always merge the mainline changes (master) into the branch first in order not to distabilized the mainline !!!
+  All merges goes towards the HEAD. 
+  
+  #git checkout test 
+  #git merge master   => it will show up a commit message
+
+  Fast-forward merge :
+  ----------------------- 
+   #git checkout master 
+   #git merge test    => it will not show up a commit message, but using a feature fast-forward. Fast-forward means the master HEAD is pointing to a future existing commit because a branch can be in front of the master. 
+
+
+ Branches
+ ----------
+  a) top-of-trunk model (only master branch)
+  b) master-and-topic (master and topic as branch 1+N branches)
+  c) progressive-stability (master, development like a master and topic 2+N branches)
+ You can use tags to keep tracking in time the changes.    
+  -big project branch - you use a big_project branch coming from master and then from time to time you merge master into this branch in order not to diverge too much 
+  -there are situation when from master you create a hotfix, ship back to master and then from master to development branch in order to have continuity 
+
+ Managing branches
+ ---------------------
+  #git branch -v            => shows the messages 
+  #git branch -a            => list all branches and the remote ones
+  #git branch --no-merged   => list branches that are not merged
+  #git branch --merged      => list branches that are merged 
+  #git branch -d test       => it will delete branch test.  NOTE: It will not delete a branch that it's not merged yet !!! This is for safety!
+  #git branch -D test       => this will force a deletion
+
+  Resolving conflicts
+  -----------------------
+  If you change the same line in the same file (file1) in different branch, it will be a conflict :
+  - having the file1 in both branches : 
+  #git show master
+  #git show featureA   
+  #git checkout master
+  #git merge featureA
+  #git status 
+  #vi file1 => it will show you conflict markers   <<<<<<<<<<<<<<< HEAD , ============ and >>>>>>>>>>>>>>> branch 
+   - You need to solve conflict manually by editing the file as you want 
+   #git add file1
+   #git commit 
+   #git lga 
+   #git show   => first "-" is where HEAD is, second "-" shows the line that wanted to be merged
+
+   Rebasing - to have a liniar history 
+   --------------
+   #git branch featureB
+   #git cherry-pick <sha1>    =>with this you only take one commit 
+
+
+   #git branch -a  => you are on featureA
+   #git rebase master    => !!!always rebase into HEAD  
+   With rebase, all changes from the branch are copied on top of master, rewriting the commits hashes.It is copying history, not rewriting history. 
+
+    Rebase conflicts 
+    -----------------
+    - solve them in the same manner as merge conflicts 
+    #vi file
+    #git add file 
+    #git rebase --continue
+ 
+
+
+
+

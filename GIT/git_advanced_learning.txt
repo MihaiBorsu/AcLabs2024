@@ -1,0 +1,732 @@
+Git Advanced 
+--------------------
+ 
+There are 3 models : 
+ 1) centralized model - a shared repository split to all developers and working all on the same shared repo
+ 2) integration manager (fork-and-pull model)
+      => the development team are doing a force cloning of the master repository and works there.Integration manager can see all these forks
+      => only integration manager can push to master repo 
+      => all the changes from development team are going to integration manager
+ 3) dictator and lieutenant model 
+      => development makes changes
+      => lieutenants are responsable for a part of system 
+      => dictator is responsable for all lieutenants and large integrations. He is pushing the changes to master
+
+ Git hosting
+ --------------
+ 1) SSH server -Based working with SSH for Linux server (ssh key for each user, git-shell , ssh@servername:project.git)
+  Pros: free, you already have all, very secure 
+  Cons: git only, highly technical, many steps, access control is difficult, no auditing
+ 
+ 2) Internet hosting : GitHub, Bitbucket, Gitlab - access over HTTPs passing firewall issues
+  Pros: easy admin and access control, no VPN, much more full-featured
+  Cons: costs a bit of money, traffic over the internet, trust 
+  
+ README.md - Github is rendering for viewers 
+
+ 3) On-premises hosts - Local hosting : GitHub Enterprise, Stash, Gitlab
+  Pro : your server, advanced features, ultimate control
+  Cons: expensive, needs resources
+
+ Remotes
+ -----------------
+  - git clone setup a remote "origin" from where you cloned..it's just a name
+  
+  #git remote 
+  #git remote -v 
+  #git lga     => it shows in red with origin prefix the remote branches that are tracked by git
+
+  fetch  = you download from a remote 
+  push   = you are uploading to a remote 
+
+  #git remote add name url   => to add a remote with name pointing to url 
+  #git remote -v 
+   name url (fetch)
+   name url (push)
+
+
+  #git lga --date-order   => list all in a particular order
+
+  If there is a branch origin/compact: 
+  #git checkout compact    => it will create a local compact branch which tracks origin/compact branch
+
+  To backup origin/compact and master : 
+  #git remote add backup /tmp/test.git      test.git is a bare repo 
+  #git push --all backup                => it will push the compact branch and master to the test.git bare repo
+
+  Fetch and pulling 
+  -----------------------
+  #git fetch   => take all changes from git 
+  #git merge origin/master   => merge all origin/master to local master 
+
+  As merge  :
+  #git pull   => to take all changes and overwrite them on the repo. It's doing git fetch and then merge. This will not be a linear history.
+
+  As rebase: 
+  
+  #git pull --rebase    => it is equivalent with fetch followed by rebase, this history becomes linear
+  To setup default behavior as rebase : 
+  #git config --global pull.rebase true     => now when you give #git pull it will to automatically pull and rebase
+
+  #git pull --no-rebase => it will to fetch with merge 
+
+  Pushing
+  ----------------------
+  - there are 2 behaviors: 
+  1) git will push local branches to the remote branches that already exist with the same name
+  2) since git 2.0, ("simple" method) git only pushes the current branch to the corresponding remote branch that 'git pull' uses to update the current branch
+
+   #git config --global push.default simple
+   #git push origin hotfix   => git push hotfix to origin 
+   #git push    => it will not push anything because GIT doesn't know which branch to push 
+   #git push origin hotfix -u  => -u for hotfix branch to track remote branch hotfix from origin 
+   #git push    => it will work 
+
+   There is a situation when working on master and you have master tracking origin/master. But on origin/master the master is ahead with 1 commit. 
+   #git checkout master
+   #git push => it will give error "non-fast-forward" because GIT is not doing merge behind your back . NOTE: Always do the merge localy. 
+
+  Tags
+  -------------------------
+  Two types of tags: 
+  a) simple tags - they can be moved as you want to
+  b) annotation tags - they can't be moved since they are created. There is a reference to an annotation object stored in library index (one SHA1 hash) and this annotation object point to a commit
+
+ Simple tag: 
+  #git tag <tag_name> <sha1>
+  #git tag <tag_name> -f => you can move the tag 
+
+ Annotated tag:
+  #git tag <tag_name> <sha1> -m "message"
+  #git show -q  <tag_name>  => -q supress the diff output   
+
+  For annotated tags, they are showing at commit message who did the tag, message of tag, date...more info than the simple tag
+
+  #git push origin <tag>   => it will push only tag  
+  #git push origin --tags => it will push all your tags
+
+  Etiquette
+  -------------
+  2 git etiquette: 
+  1) Commit-message : to be less than 15 characters, provide a meaningful short message, use proper formatting, be descriptive with the body of the message, link to an issue if applicable 
+  2) History : don't rewrite history that others have seen, but if you do communicate properly, be intentional with the commit graph   Note: Rewrite history with kindness :)
+
+  
+ Github Basic : 
+ --------------------
+  #git clone <url_repo>
+
+ Github Flow:
+ --------------------
+   Notifications happen for 3 reasons: 
+     1) new repo created
+     2) new issue created
+     3) a mention - anywhere in a comment or issue or pull request, type @ followed by a username
+
+   Receiving notifications will be : 
+     1) notifications views  
+     2) email
+
+    For repositories, there are 3 subscriptions settings :
+     1)not watching
+     2)watching 
+     3)ignoring 
+
+    Manage your attention: 
+     a) unsubscribe from repositories you don't care about 
+     b) mute conversation often
+     c) get @mentioned when you're needed
+
+    Teams : 
+     - belong to an organization (company = organization name)
+     - to mention a team : @company/team   Exemple: @company/productionA
+
+    Markdown : 
+     - Plain text
+     - Formatting markers
+     - Lots of expressiveness
+     Example : **bold** , *italic* , [link] (http://...)
+       ![Image of Cat](https://.....cat.png)
+      * => used as start line 
+      1. => 1. 
+      1. => 2. 
+
+       Code blocks (``` used in front and in end ), task list ([x] or []), 
+       tabullar 
+         First |  Second 
+       --------|----------
+       references = turn into links #1 or 213123213
+       mentions like @user
+       :+1: = emoji
+
+       Markdown files = *.md or *.markdown 
+
+ Advanced Git Tools
+ ============================
+   Unstaging and Amending 
+ ---------------------------
+  staged: 
+     file1
+     file2
+  unstaged:
+     file3
+
+  #git status
+  #git reset HEAD file2   => this will get out the file from staged and put it in unstage 
+  #git commit -m "test"
+  #git status 
+   unstaged : file2 and file3  and I want file3 to be commited but in the previous commit
+  #git add file3  
+  #git commit --amend      => this will amend the file to the same commit as previous
+  #git show --stat 
+    
+ Git Internals
+----------------------
+ #git cat-file -t <sha1>  =>  -t = type which can be a blob file (has only the content of a file), tag, tree (shows entire tree with rights, sha1 of blobs or other trees), commit
+ #git cat-file -p <sha1>  => to print (-p) the content of sha1 
+ 
+  Commits have the following fields: tree, parent, author, commiter and message (annotation)
+  Tags have the following fields: object (sha1 point to a commit), type (usual commit), tag name, tagger (who did the tag) and annotation message 
+ 
+ #tree .git/refs => there are references called loose references
+ #less .git/packed-refs => all references since you clone the repo till they are changed. These are for remote side of the repository
+         When you create a new branch or fetch, one of these references will be converted on the disk references.
+ 
+         This lists all of the references that came down originally with the repository when I cloned it, and they're stored here until they change. When they change, by fetching them or by creating a new branch, one of these lines will get converted to an on-disk reference. Here the SHA-1# of the object the reference is pointing to is listed in a field right next to its name, but that's not the case for loose references, loose references are just a file.
+ 
+  #cat .git/refs/heads/master - pointing to a sha1, loose reference is just a file  
+  #cat .git/refs/tags/v1.7.3  - same as loose reference
+  #cat .git/HEAD      =>HEAD is a simbolic reference to point to other references. HEAD tell you on which branch you are
+     ref: refs/heads/master 
+
+ Undoing merges
+ --------------------
+ #git revert HEAD -m 1    (-m = this is the main line, the parent I want to keep,   1 = the main branch where you did the merge in this case, 2 is the other branch that was merged) 
+   This is introducing a new commit, that it's a copy of the parent commit where you are reverting, but this is problematic when using feature on a branch because git thinks you already merged the feature branch in team and it should be included in the new commit.
+
+  That's why it's better to do : 
+  #git reset --hard <sha1> => this will reset everything 
+
+ Clearing the Working directory
+ -------------------------------
+  file1 - staged, modified 
+  file2, dir1 - untracked 
+
+  #git status 
+  #git diff   => shows the diff changed in file1
+
+  A method to reset something very small in the file : 
+
+  #git checkout -p    => checkout is getting from database the HEAD hash and put in inside working directory, -p = patch it will become interactive for each diff 
+  #git diff  => shows what you let through interactive 
+  #git status  => it is the same 
+  
+  #git checkout -f  => it will force copy entire HEAD over my working directory 
+  #git status     => you will see that file1 was reset to what was in HEAD, no  more changes 
+
+  #git clean -f    => it is cleaning the working directory, but you need to use -f (force) for the command to do something. THIS WILL REMOVE UNTRACKED FILES, BUT DOESN'T TOUCH DIRECTORIES !!!!
+  #git clean -fd   => it will clean also directories (-d)
+  #git clean -fdx  => to clean even the ignored files (-x) 
+
+  #git clean -idx  => clean in interactive mode files, directories and ignored files. It will come as a menu : clean (means all), s = select by numbers (it will put an * and then you need to press c to clean it) , a = ask each and so on
+
+ Level of reset
+ ----------------------------------------
+  - in GIT you are working with 3 trees : HEAD (last commit, next parent), Index (proposed next commit), Working directory (Sandbox)
+
+  Operations: 
+  - checkout = takes HEAD copying to INDEX and Working Directory 
+  - stage files = copies from Working directory to Index 
+  - commit = copies from Index to HEAD
+
+  1.  HEAD => eb43bf8 file v1  , Index => file v1, Working Directory => file v1   
+     #git status => it will print no changes 
+  2. edit file in Working Directory => git status will show the file is changed, resulting file v2
+  3. #git add file  => we add the modified file v2 to Index 
+  4. #git commit   => we move the HEAD creating a new commit 9e5e6a4 with the new file modified
+
+   Repeat steps 1-4 => it will create a third version of modified file and HEAD will point to the third commit 38eb946
+    HEAD => 38eb946 file v3, Index => file v3, Working Directory => file v3
+
+  There are 3 situations :   ~ = parent
+  a)#git reset --soft HEAD~ => it will move HEAD to 9e5e6a4 (point to file v2), but the Index and Working Directory will point to file v3
+  b)#git reset [--mixed] HEAD~ => it will move HEAD to 9e5e6a4 (point to filev2) and also Index will point to file v2, but Working Directory will point to file v3   (--mixed is by default). File v3 is not lost
+  c)#git reset --hard HEAD~ => it will move HEAD to 9e5e6a4 (point to filev2) and also Index and Working Directory will point to file v2. !!!! File v3 will be lost, because Working Directory has no backup copy.
+  
+
+  Diff and Log Tricks 
+  -----------------------
+ alias.lga=log --graph --oneline --decorate --all
+ alias.lg=log --graph --oneline --decorate
+
+  #git log -1 => shows only one line 
+  #git config --global alias.lg1 'log --graph --oneline --decorate -1'
+  #git lg1 
+  #git lg1 <sha1>
+  #git lg1 <branch_name>
+
+  #git lg1 HEAD^1  => first parent branch
+  #git lg1 HEAD^   => by default is 1st parent as above
+  #git lg1 HEAD~   => parent 
+  #git lg1 HEAD~2  => follows the tree with 2 commits behind on the first parent link
+
+  #git lg1 HEAD^2  => second parent branch
+
+   
+root@tmlina115:~/GIT/branches_learning.git[master]# git lga
+* 65d1b68 (featureA) Feature C adding file5.txt
+*   b21ad41 (featureB) test
+|\  
+| | * 676ba9c (featureC) Feature C adding file5.txt
+| | *   d4b5151 (HEAD -> master) test
+| | |\  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[master]# git cherry-pick 65d1b68
+[master dd19eca] Feature C adding file5.txt
+ Date: Mon Aug 27 12:44:27 2018 +0300
+ 1 file changed, 6 insertions(+)
+ create mode 100644 file5.txt
+root@tmlina115:~/GIT/branches_learning.git[master]# git lga
+* dd19eca (HEAD -> master) Feature C adding file5.txt
+| * 65d1b68 (featureA) Feature C adding file5.txt
+| *   b21ad41 (featureB) test
+| |\  
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[master]# git lg1
+* dd19eca (HEAD -> master) Feature C adding file5.txt
+root@tmlina115:~/GIT/branches_learning.git[master]# git lg1 featureB
+*   b21ad41 (featureB) test
+|\  
+root@tmlina115:~/GIT/branches_learning.git[master]# 
+root@tmlina115:~/GIT/branches_learning.git[master]# git lg1 6d04dfe
+* 6d04dfe Adding line3 in file3.txt master
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lga
+* dd19eca (master) Feature C adding file5.txt
+| * 65d1b68 (featureA) Feature C adding file5.txt
+| *   b21ad41 (HEAD -> featureB) test
+| |\  
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^1       
+* e851f5f completed feature A
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^2
+* 6d04dfe Adding line3 in file3.txt master
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD~1
+* e851f5f completed feature A
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD~
+* e851f5f completed feature A
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD~2
+* 424c9eb partially implemented featureA
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^2~1
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^2~2
+fatal: ambiguous argument 'HEAD^2~2': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^1~1
+* 424c9eb partially implemented featureA
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg1 HEAD^1~2
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+
+
+  #git lg master..featureA    => it will show all the commit branch that are on featureA but not on master
+  #git diff master..featureA  => it will show the differences that were introduced
+  #git lg master...featureA => it will show the commits reachable by master and featureA but not both (not the intersection)
+  #git lg master...featureA --left-right => shows the commits to which side of the branch are 
+
+Example: 
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lga
+* dd19eca (master) Feature C adding file5.txt
+| * 65d1b68 (featureA) Feature C adding file5.txt
+| *   b21ad41 (HEAD -> featureB) test
+| |\  
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg master..featureC
+* 676ba9c (featureC) Feature C adding file5.txt
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg master..featureA
+* 65d1b68 (featureA) Feature C adding file5.txt
+* b21ad41 (HEAD -> featureB) test
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git diff master..featureA
+diff --git a/file4.txt b/file4.txt
+new file mode 100644
+index 0000000..612929b
+--- /dev/null
++++ b/file4.txt
+@@ -0,0 +1 @@
++adsadasdsa
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lga  
+* dd19eca (master) Feature C adding file5.txt
+| * 65d1b68 (featureA) Feature C adding file5.txt
+| *   b21ad41 (HEAD -> featureB) test
+| |\  
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg featureC..featureA
+* 65d1b68 (featureA) Feature C adding file5.txt
+* b21ad41 (HEAD -> featureB) test
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg featureC...featureA
+* 65d1b68 (featureA) Feature C adding file5.txt
+* b21ad41 (HEAD -> featureB) test
+* 676ba9c (featureC) Feature C adding file5.txt
+* d4b5151 test
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lg featureC...featureA --left-right
+> 65d1b68 (featureA) Feature C adding file5.txt
+> b21ad41 (HEAD -> featureB) test
+< 676ba9c (featureC) Feature C adding file5.txt
+< d4b5151 test
+
+ Filter-branch
+ -----------------------
+ 
+ #git lol 
+ #git filter-branch --env-filter 'GIT_AUTHOR_NAME=knowcki' HEAD~3..HEAD   => it will rewrite all commit parents of 3 line below, changing the GIT_AUTHOR_NAME of these commits
+ 
+ #tree .git/refs
+   There is a original subdirectories where all the refs were saved before filter-branch operation and it can be undo with cp.
+
+ #cp -R .git/refs/original/refs/heads/<branch> .git/refs/heads/<branch>
+
+
+
+
+ Creset'"ina115:~/GIT/branches_learning.git[featureB]# git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>% 
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   b21ad41 - (HEAD -> featureB) test (3 days ago) <knowacki>
+|\  
+| * 6d04dfe - Adding line3 in file3.txt master (3 days ago) <knowacki>
+* | e851f5f - completed feature A (3 days ago) <knowacki>
+* | 424c9eb - partially implemented featureA (3 days ago) <knowacki>
+|/  
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch 
+Rewrite b21ad41b2b297afe187c53cf4398654c72669e52 (5/5)
+WARNING: Ref 'refs/heads/featureB' is unchanged
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch --env-filter 'GIT_AUTHOR_NAME=knowcki' HEAD~3..HEAD
+Rewrite b21ad41b2b297afe187c53cf4398654c72669e52 (4/4)
+Ref 'refs/heads/featureB' was rewritten
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   c5c76bd - (HEAD -> featureB) test (3 days ago) <knowcki>
+|\  
+| * b1cba7f - Adding line3 in file3.txt master (3 days ago) <knowcki>
+* | 5daf01c - completed feature A (3 days ago) <knowcki>
+* | 3e8dade - partially implemented featureA (3 days ago) <knowcki>
+|/  
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+
+
+
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   b21ad41 - (HEAD -> featureB, refs/original/refs/heads/featureB) test (3 days ago) <knowacki>
+|\
+| * 6d04dfe - Adding line3 in file3.txt master (3 days ago) <knowacki>
+* | e851f5f - completed feature A (3 days ago) <knowacki>
+* | 424c9eb - partially implemented featureA (3 days ago) <knowacki>
+|/
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch --env-filter 'GIT_AUTHOR_NAME=Cipi' HEAD~3..HEAD
+Cannot create a new backup.
+A previous backup already exists in refs/original/
+Force overwriting the backup with -f
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch --env-filter 'GIT_AUTHOR_NAME=Cipi' HEAD~3..HEAD -f
+Cannot create a new backup.
+A previous backup already exists in refs/original/
+Force overwriting the backup with -f
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch -f --env-filter 'GIT_AUTHOR_NAME=Cipi' HEAD~3..HEAD
+Rewrite b21ad41b2b297afe187c53cf4398654c72669e52 (4/4)
+Ref 'refs/heads/featureB' was rewritten
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   45872f1 - (HEAD -> featureB) test (3 days ago) <Cipi>
+|\
+| * 7c85f17 - Adding line3 in file3.txt master (3 days ago) <Cipi>
+* | db21b3d - completed feature A (3 days ago) <Cipi>
+* | 659ab89 - partially implemented featureA (3 days ago) <Cipi>
+|/
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]# cp -R .git/refs/original/refs/heads/featureB .git/refs/heads/featureB
+cp: overwrite `.git/refs/heads/featureB'? y
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   b21ad41 - (HEAD -> featureB, refs/original/refs/heads/featureB) test (3 days ago) <knowacki>
+|\
+| * 6d04dfe - Adding line3 in file3.txt master (3 days ago) <knowacki>
+* | e851f5f - completed feature A (3 days ago) <knowacki>
+* | 424c9eb - partially implemented featureA (3 days ago) <knowacki>
+|/
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]#
+
+
+
+#git filter-branch -f --tree-filter 'rm -rf package.json' -- --all    => -f = force the filter branch, --tree-filter has the command what to run inside tree, --all = run for all references and not just HEAD
+   It will delete the package.json in each reference.
+
+   
+Example:  
+
+#git lol
+*   b21ad41 - (HEAD -> featureB, refs/original/refs/heads/featureB) test (3 days ago) <knowacki>
+|\
+| * 6d04dfe - Adding line3 in file3.txt master (3 days ago) <knowacki>
+* | e851f5f - completed feature A (3 days ago) <knowacki>
+* | 424c9eb - partially implemented featureA (3 days ago) <knowacki>
+|/
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git status
+On branch featureB
+nothing to commit, working directory clean
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# ls -ila
+total 24
+16653953 drwxr-xr-x.  3 root root 4096 Aug 30 17:46 .
+16646146 drwxr-xr-x. 16 root root 4096 Aug 27 12:00 ..
+16653954 -rw-r--r--.  1 root root   61 Aug 27 12:42 file1.txt
+16653957 -rw-r--r--.  1 root root   33 Aug 27 12:08 file2.txt
+16653958 -rw-r--r--.  1 root root   11 Aug 30 13:28 file4.txt
+16787491 drwxr-xr-x.  8 root root 4096 Aug 30 17:54 .git
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git filter-branch -f --tree-filter 'rm -rf file4.txt' -- --all
+Rewrite dd19ecaf867905f7bcb5bf3b29ed4fe44917d918 (9/9)
+Ref 'refs/heads/featureA' was rewritten
+Ref 'refs/heads/featureB' was rewritten
+WARNING: Ref 'refs/heads/featureC' is unchanged
+WARNING: Ref 'refs/heads/master' is unchanged
+root@tmlina115:~/GIT/branches_learning.git[featureB]# ls
+file1.txt  file2.txt
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lol
+*   a6ea24b - (HEAD -> featureB) test (3 days ago) <knowacki>
+|\
+| * 6d04dfe - Adding line3 in file3.txt master (3 days ago) <knowacki>
+* | e851f5f - completed feature A (3 days ago) <knowacki>
+* | 424c9eb - partially implemented featureA (3 days ago) <knowacki>
+|/
+* 775567a - Initial Commit (3 days ago) <knowacki>
+root@tmlina115:~/GIT/branches_learning.git[featureB]#
+
+
+
+ #git filter-branch -f --subdirectory-filter script --prune-empty -- --all    => --subdirectory-filter is the filter  , script = directory we want to use as root directory, --prune-empty= leave commit that are not introducing any changes
+    It deletes everything and let what it is in script directory as root of working directory. It is re-writting entire history. 
+    
+
+ Interactive Rebasing
+ ------------------------
+  Rebasing = is a series of cherry-picks to arrange in order the history
+  
+  HEAD is on featureA branch 
+  #git rebase -i master    => rebase on top of master, but -i flag means interactive 
+
+     p, pick = use the comit as it is
+     r, reword = use commit, but change commit message
+     e, edit = use commit, but stop for amending
+     s, squash = use commit, but meld into previous commit (it's combining)
+     f, fixup = same as squash, but discard this commit's log message
+     exec = run command using shell
+  
+   - you can edit and add instead of pick to put s (from squash)
+
+
+  Shell tricks
+  -----------------  
+   In source code for GIT there is : 
+       #. contrib/completion/git-completion.bash     ( . = take everything from that file and execute in current environemnt)
+     
+     - it will let bash to autocomplete git commands (TAB)
+
+   #. contrib/completation/git-prompt.sh   => to customized prompt 
+   #export GIT_PS1_SHOWDIRTYSTATE=1            => if you do a modification in git repo, it will show you * for the following prompt
+   #export PS1='\w$(__git_ps1 " (%s)")\$'   => \w = put short version of current directory here, first $ saying evaluate what it's inside paranthese, __git_ps1 - is a function described inside git-prompt.sh script ,  %s - display current branch, last $ is  end to be printed 
+     
+     It will print as prompt:  ~/git (master)$  if there are no changes in GIT repo or ~/git (master *)$
+
+   Another terminal is zsh. 
+
+  Reflog
+  ------------
+
+  - you can have a repository that it was rebased, meaning featureA has commit on top of master commit in a straight history line 
+
+  #git lga <sha1> => if you know the sha1 before rebase you can see it as a branch. git is doing this for you : 
+
+  #git reflog featureA  => you can see a list of commits where featureA was pointing and the actions 
+
+Example:
+
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git lga
+* dd19eca (master) Feature C adding file5.txt
+| * 8c85d64 (featureA) Feature C adding file5.txt
+| *   a6ea24b (HEAD -> featureB) test
+| |\  
+| | | * 65d1b68 (refs/original/refs/heads/featureA) Feature C adding file5.txt
+| | | *   b21ad41 (refs/original/refs/heads/featureB) test
+| | | |\  
+| | |/ /  
+| |/| /   
+| | |/    
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureB]# git reflog featureA
+8c85d64 featureA@{0}: filter-branch: rewrite
+65d1b68 featureA@{1}: cherry-pick: Feature C adding file5.txt
+b21ad41 featureA@{2}: commit (amend): test
+d4b5151 featureA@{3}: commit (merge): test
+e851f5f featureA@{4}: commit: completed feature A
+424c9eb featureA@{5}: commit: partially implemented featureA
+775567a featureA@{6}: branch: Created from HEAD
+root@tmlina115:~/GIT/branches_learning.git[featureB]# 
+
+  We can undo the rebase by : 
+  #git reset --hard featureA@{3}     => reset back featureA@{3} and lose everyghing above
+
+
+Example:
+   
+   root@tmlina115:~/GIT/branches_learning.git[featureA]# git lga
+* dd19eca (master) Feature C adding file5.txt
+| * 8c85d64 (HEAD -> featureA) Feature C adding file5.txt
+| *   a6ea24b test
+| |\  
+| | | * 65d1b68 (refs/original/refs/heads/featureA) Feature C adding file5.txt
+| | | *   b21ad41 (refs/original/refs/heads/featureB, featureB) test
+| | | |\  
+| | |/ /  
+| |/| /   
+| | |/    
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureA]# git reflog featureA
+8c85d64 featureA@{0}: filter-branch: rewrite
+65d1b68 featureA@{1}: cherry-pick: Feature C adding file5.txt
+b21ad41 featureA@{2}: commit (amend): test
+d4b5151 featureA@{3}: commit (merge): test
+e851f5f featureA@{4}: commit: completed feature A
+424c9eb featureA@{5}: commit: partially implemented featureA
+775567a featureA@{6}: branch: Created from HEAD
+root@tmlina115:~/GIT/branches_learning.git[featureA]# git reset --hard featureA@{3}
+HEAD is now at d4b5151 test
+root@tmlina115:~/GIT/branches_learning.git[featureA]# git lga
+* dd19eca (master) Feature C adding file5.txt
+| * 65d1b68 (refs/original/refs/heads/featureA) Feature C adding file5.txt
+| *   b21ad41 (refs/original/refs/heads/featureB, featureB) test
+| |\  
+| | | * 676ba9c (featureC) Feature C adding file5.txt
+| |_|/  
+|/| |   
+* | |   d4b5151 (HEAD -> featureA) test
+|\ \ \  
+| |/ /  
+|/| /   
+| |/    
+| * 6d04dfe Adding line3 in file3.txt master
+* | e851f5f completed feature A
+* | 424c9eb partially implemented featureA
+|/  
+* 775567a Initial Commit
+root@tmlina115:~/GIT/branches_learning.git[featureA]# 
+
+
+   !!!!
+
+   If you give #git reflog  (by default HEAD is an argument). You can go in time in any moment (find the way back you were before), reflogs are not shared, there are only local (not for remote) and stored inside .git/logs
+
+   #tree .git/logs/ 
+  
+    root@tmlina115:~/GIT/branches_learning.git[featureA]# tree .git/logs/
+.git/logs/
+------ HEAD
+------ refs
+     ---- heads
+        --- featureA
+        --- featureB
+        --- featureC
+        --- master
+
+
+
