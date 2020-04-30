@@ -1,0 +1,344 @@
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ pwd
+/Users/cdima
+bash-3.2$ cd NOKIA/
+bash-3.2$ ls
+DSL				REPOS_TEST			multivalidator_state.json
+GIT_Basics.md			ac-labs-2020			test
+LINUX_Basics.md			ac-labs-test
+METABRANCH			mfo
+bash-3.2$ cd test/
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 0
+9321832 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:01 .
+5540858 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:01 ..
+9321853 drwxr-xr-x  14 cdima  staff  448 Apr 30 15:01 ac-labs-2020
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ cd ..
+bash-3.2$ mkdir test1
+bash-3.2$ ls -ila
+total 80
+5540858 drwxr-xr-x  14 cdima  staff    448 Apr 30 15:06 .
+2408113 drwxr-xr-x+ 99 cdima  staff   3168 Apr 30 15:05 ..
+6633031 -rw-r--r--@  1 cdima  staff  10244 Apr 27 19:07 .DS_Store
+6883367 drwxr-xr-x   3 cdima  staff     96 Apr 28 13:40 DSL
+6595054 -rw-r--r--   1 cdima  staff   5248 Apr 27 13:13 GIT_Basics.md
+6627324 -rw-r--r--   1 cdima  staff   9545 Apr 29 18:33 LINUX_Basics.md
+5542070 drwxr-xr-x  19 cdima  staff    608 Apr 16 16:27 METABRANCH
+6800824 drwxr-xr-x   3 cdima  staff     96 Apr 28 10:24 REPOS_TEST
+7182388 drwxr-xr-x  15 cdima  staff    480 Apr 30 14:36 ac-labs-2020
+9312572 drwxr-xr-x   2 cdima  staff     64 Apr 30 13:25 ac-labs-test
+6597873 drwxr-xr-x  11 cdima  staff    352 Apr 27 13:19 mfo
+5542353 -rwxr-xr-x   1 cdima  staff   5762 Apr 16 16:47 multivalidator_state.json
+9321832 drwxr-xr-x   3 cdima  staff     96 Apr 30 15:01 test
+9322329 drwxr-xr-x   2 cdima  staff     64 Apr 30 15:06 test1
+bash-3.2$ cd test
+bash-3.2$ cd ..
+bash-3.2$ cd test1
+bash-3.2$ clear
+bash-3.2$ pwd
+/Users/cdima/NOKIA/test1
+bash-3.2$
+bash-3.2$
+bash-3.2$ git init my_project
+Initialized empty Git repository in /Users/cdima/NOKIA/test1/my_project/.git/
+bash-3.2$ ls -ila
+total 0
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 .
+5540858 drwxr-xr-x  14 cdima  staff  448 Apr 30 15:06 ..
+9322343 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 my_project
+bash-3.2$ cd my_project/
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  10 cdima  staff  320 Apr 30 15:06 .git
+bash-3.2$ cd .git/
+bash-3.2$ ls -ila
+total 24
+9322344 drwxr-xr-x  10 cdima  staff  320 Apr 30 15:06 .
+9322343 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322364 -rw-r--r--   1 cdima  staff   23 Apr 30 15:06 HEAD
+9322360 drwxr-xr-x   2 cdima  staff   64 Apr 30 15:06 branches
+9322373 -rw-r--r--   1 cdima  staff  137 Apr 30 15:06 config
+9322347 -rw-r--r--   1 cdima  staff   73 Apr 30 15:06 description
+9322348 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:06 hooks
+9322345 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 info
+9322374 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:06 objects
+9322361 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:06 refs
+bash-3.2$ cd ..
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  10 cdima  staff  320 Apr 30 15:06 .git
+bash-3.2$ ls
+bash-3.2$ touch test.txt
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:07 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  10 cdima  staff  320 Apr 30 15:06 .git
+9322400 -rw-r--r--   1 cdima  staff    0 Apr 30 15:07 test.txt
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add test.txt
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   test.txt
+
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:07 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  11 cdima  staff  352 Apr 30 15:08 .git
+9322400 -rw-r--r--   1 cdima  staff    0 Apr 30 15:07 test.txt
+bash-3.2$ rm test.txt
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   test.txt
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    test.txt
+
+bash-3.2$ git rm test.txt
+rm 'test.txt'
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:08 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  11 cdima  staff  352 Apr 30 15:08 .git
+bash-3.2$
+bash-3.2$
+bash-3.2$ touch test.txt
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:10 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  11 cdima  staff  352 Apr 30 15:08 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+bash-3.2$
+bash-3.2$
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git add test.txt
+bash-3.2$
+bash-3.2$ clear
+Adaugare fisier test.txt
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   4 cdima  staff  128 Apr 30 15:10 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  11 cdima  staff  352 Apr 30 15:10 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+bash-3.2$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   test.txt
+
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config -l
+bash-3.2$ git config --global user.name 'Dima Ciprian'
+bash-3.2$ git config --global user.email 'ciprian.dima@nokia.com'
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config -l
+bash-3.2$
+bash-3.2$
+bash-3.2$ git commit
+[master (root-commit) 7feb2fd] Adaugare fisier test.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test.txt
+bash-3.2$
+bash-3.2$ git status
+On branch master
+nothing to commit, working tree clean
+bash-3.2$ git log
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config -l
+bash-3.2$
+bash-3.2$
+bash-3.2$ nano
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config --global core.editor nano
+bash-3.2$ touch test1.txt
+bash-3.2$ git add test1.txt
+bash-3.2$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test1.txt
+
+bash-3.2$ git commit
+[master e8e7993] Fisier 2 adaugat
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.txt
+bash-3.2$
+bash-3.2$
+bash-3.2$ git log
+bash-3.2$
+bash-3.2$
+bash-3.2$ git branch
+* master
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ clear
+bash-3.2$ git branch
+* master
+bash-3.2$
+bash-3.2$
+bash-3.2$ git checkout -b branch_test
+Switched to a new branch 'branch_test'
+bash-3.2$
+bash-3.2$
+bash-3.2$ git branch
+* branch_test
+  master
+bash-3.2$ git checkout master
+Switched to branch 'master'
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   5 cdima  staff  160 Apr 30 15:16 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:21 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+9322939 -rw-r--r--   1 cdima  staff    0 Apr 30 15:16 test1.txt
+bash-3.2$ touch test2.txt
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   6 cdima  staff  192 Apr 30 15:21 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:21 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+9322939 -rw-r--r--   1 cdima  staff    0 Apr 30 15:16 test1.txt
+9323214 -rw-r--r--   1 cdima  staff    0 Apr 30 15:21 test2.txt
+bash-3.2$ git add test2.txt
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   6 cdima  staff  192 Apr 30 15:21 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:21 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+9322939 -rw-r--r--   1 cdima  staff    0 Apr 30 15:16 test1.txt
+9323214 -rw-r--r--   1 cdima  staff    0 Apr 30 15:21 test2.txt
+bash-3.2$ git branch
+  branch_test
+* master
+bash-3.2$ git checkout branch_test
+A	test2.txt
+Switched to branch 'branch_test'
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   6 cdima  staff  192 Apr 30 15:21 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:22 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+9322939 -rw-r--r--   1 cdima  staff    0 Apr 30 15:16 test1.txt
+9323214 -rw-r--r--   1 cdima  staff    0 Apr 30 15:21 test2.txt
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 0
+9322343 drwxr-xr-x   6 cdima  staff  192 Apr 30 15:21 .
+9322329 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:06 ..
+9322344 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:22 .git
+9322565 -rw-r--r--   1 cdima  staff    0 Apr 30 15:10 test.txt
+9322939 -rw-r--r--   1 cdima  staff    0 Apr 30 15:16 test1.txt
+9323214 -rw-r--r--   1 cdima  staff    0 Apr 30 15:21 test2.txt
+bash-3.2$ git status
+On branch branch_test
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   test2.txt
+
+bash-3.2$ clear
+bash-3.2$ git commit -m "Test2"
+[branch_test dcf6300] Test2
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.txt
+bash-3.2$
+bash-3.2$
+bash-3.2$ git status
+On branch branch_test
+nothing to commit, working tree clean
+bash-3.2$ git log
+bash-3.2$ git log --oneline --graph --all
+bash-3.2$ git log --oneline --all
+bash-3.2$
+bash-3.2$
+bash-3.2$ git checkout master
+Switched to branch 'master'
+bash-3.2$ git log
+bash-3.2$
+bash-3.2$
+bash-3.2$ git remote -v
+bash-3.2$
+bash-3.2$
+bash-3.2$ git remote --help
+bash-3.2$
+
+
