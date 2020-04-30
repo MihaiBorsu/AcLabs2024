@@ -11,10 +11,10 @@ hellomake: $(OBJ)
 
 
 clean :
-	rm -f hellomake.o hellofunc.o hellomake
+	rm -f *.o hellomake
 
 setup :
 	git clone https://github.com/joh/when-changed.git ../when_changed
 
 watch :
-	python3 ../when_changed/when-changed -s * -c 'bash ./run.sh'
+	python3 ../when_changed/when-changed -1 -s * -c 'bash ./run.sh'

@@ -7,7 +7,8 @@ echo ""
 ./hellomake
 
 
-make clean &> /dev/null
+# make clean &> /dev/null
+
 
 
 

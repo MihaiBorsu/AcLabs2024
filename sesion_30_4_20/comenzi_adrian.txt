@@ -1,0 +1,89 @@
+ 9996  cat QQQQQQQQQQQQQ.txt
+ 9997  echo $?
+ 9998  ls
+ 9999  echo $?
+10000  exit 1
+10001  -
+10002  bash ./sesion_30_4_20/bash_basic.sh
+10003  echo $?
+10004  bash ./sesion_30_4_20/bash_basic.sh
+10005  echo $?
+10006  true
+10007  echo $?
+10008  false
+10009  echo $?
+10010  false
+10011  echo $?
+10012  false ; echo $?
+10013  true ; echo $?
+10014  true && echo YES || echo NO
+10015  false && echo Yes || echo No
+10016  bash ./sesion_30_4_20/bash_basic.sh
+10017  test
+10018  man test
+10019  PLIN="contin text si mere"
+10020  echo $PLIN
+10021  $PLIN
+10022  echo $PLIN
+10023  test -z $PLIN
+10024  test -n $PLIN
+10025  test  $PLIN == "mere"
+10026  test  $PLIN "==" "mere"
+10027  test  $PLIN "==" "contin text si mere"
+10028  test  $PLIN "==" *"mere"*
+10029  test  $PLIN "==" '*"mere"*'
+10030  bash ./sesion_30_4_20/bash_basic.sh
+10031  echo $PLIN
+10032  echo ${PLIN%contin}
+10033  echo ${PLIN#contin}
+10034  echo ${PLIN%mere}
+10035  echo ${PLIN%si}
+10036  echo ${PLIN%si*}
+10037  echo ${PLIN#*si}
+10038  for i in /dev/ttyS?; do\n        echo $i\n    done
+10039  for i in {1..5}; do\n        echo "Welcome $i"\n    done
+10040  for i in {1..10..2}; do\n        echo "Welcome $i"\n    done
+10041  cat GIT_Basics.md | while read line; do\n        echo ---- $line\n    done
+10042  pwd
+10043  echo "current dir: $(pwd)"
+10044  echo "current dir: /root/repos/ac-labs-2020"
+10045  cd Linux_commands
+10046  echo "current dir: $(pwd)"
+10047  curl google.ro
+10048  curl yahoo.ro
+10049  curl yahoo.com
+10050  bash ./sesion_30_4_20/bash_basic.sh
+10051  ..
+10052  bash ./sesion_30_4_20/bash_basic.sh
+10053  cd some_c_make_proj
+10054  ls
+10055  ll
+10056  make hellomake
+10057  ll
+10058  ./hellomake
+10059  make hellomake
+10060  ./hellomake
+10061  bash ./run.sh
+10062  make watch
+10063  make setup
+10064  make watch
+10065  bash ./run.sh
+10066  make clean
+10067  bash ./run.sh
+10068  make clean
+10069* ../some_python_client_sserver
+10070* pwd
+10071  /root/repos/ac-labs-2020/some_python_client_sserver
+10072* python3 server.py
+10073  python3 client.py Mihnea
+10074* make server
+10075  make clients
+10076  make -h
+10077  bash ./run.sh
+10078  time bash ./run.sh
+10079* make server
+10080  time bash ./run.sh
+10081* make server
+10082  time bash ./run.sh
+10083  ..
+10084  cd sesion_30_4_20

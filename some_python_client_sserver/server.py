@@ -1,5 +1,6 @@
 import socket
 import sys
+import time
 
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,6 +20,7 @@ while True:
     try:
         print('connection from', client_address)
         data = ""
+        # time.sleep(0.5)
 
         # Receive the data in small chunks and retransmit it
         while True:
