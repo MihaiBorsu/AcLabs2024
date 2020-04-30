@@ -1,40 +1,27 @@
 # Scripting with Linux and GIT
 
+Basic training to get you started with scripting in Linux and how to setup a efficient workspace to run and test your projects.
+
 ## Pre-requisites
-Windows 10 with Linux subsystem or a Linux OS.
+A Linux/Unix terminal like Windows 10 with Linux subsystem, a Linux OS or a Mac.
 
 
 ## Topics
 
-Choosing a GIT host for our projects
+Basic Linux terminal training
 
-Basic Linux terminal training (in WLS)
+Basic GIT commands and training
 
-Writing some Bash and Make
+Basic Bash and Make syntax and commands
 
 Setting up and running some projects
 
-
-## Commands
-
-### GIT
-
-git clone $REPO_URL
-
-git clone $REPO_URL $REPO_LOCAL_PATH
+Questions, answers and examples.
 
 
+## Trainers
 
-GIT   - Basics
-GIT   - Create
-GIT   - Cloning
-GIT   - Pushing
-LINUX - Basics
-LINUX - WLS
-LINUX - Workspaces
-LINUX - Bash
-LINUX - Workflow
-
-## Examples
+- Adrian Mogoi (Mo)
+- CIprian Dima (Cip)
 
 
