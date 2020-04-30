@@ -1,0 +1,254 @@
+bash-3.2$
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$ ls -ila
+total 72
+7182388 drwxr-xr-x  13 cdima  staff   416 Apr 30 13:09 .
+5540858 drwxr-xr-x  11 cdima  staff   352 Apr 29 18:36 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:13 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config -l
+bash-3.2$ git config --global alias.lga "log --graph --oneline --decorate --all"
+bash-3.2$ git config --global alias.lg "log --graph --oneline --decorate"
+bash-3.2$ git lg
+bash-3.2$ git branch -v
+* master e9b0567 clean README.md
+bash-3.2$ git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+bash-3.2$ git lg
+bash-3.2$ git status -sb
+## master...origin/master
+?? GIT/~$1 - GIT Basic Training.pptx
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$ ls -ila
+total 72
+7182388 drwxr-xr-x  13 cdima  staff   416 Apr 30 13:09 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:33 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+bash-3.2$ cd GIT
+bash-3.2$ ls
+1 - GIT Basic Training.pptx	README.md			~$1 - GIT Basic Training.pptx
+2 - GIT tracking changes.pptx	git_advanced_learning.txt
+3 - GIT branching.pptx		git_introduction_learning.txt
+bash-3.2$ ls -ila
+total 2888
+7184706 drwxr-xr-x   9 cdima  staff     288 Apr 30 10:02 .
+7182388 drwxr-xr-x  13 cdima  staff     416 Apr 30 13:09 ..
+7184724 -rw-r--r--@  1 cdima  staff  998798 Apr 23  2019 1 - GIT Basic Training.pptx
+7184725 -rw-r--r--@  1 cdima  staff  219889 Apr 22  2019 2 - GIT tracking changes.pptx
+7184726 -rw-r--r--@  1 cdima  staff  201578 Apr 23  2019 3 - GIT branching.pptx
+7184729 -rw-r--r--@  1 cdima  staff     874 Apr 29 19:09 README.md
+7184727 -rw-r--r--@  1 cdima  staff   31053 Aug 31  2018 git_advanced_learning.txt
+7184728 -rw-r--r--@  1 cdima  staff    9842 Aug 27  2018 git_introduction_learning.txt
+7586082 -rw-r--r--@  1 cdima  staff     165 Apr 30 10:02 ~$1 - GIT Basic Training.pptx
+bash-3.2$ git rm ~
+Display all 105 possibilities? (y or n)
+bash-3.2$ ls -ila
+total 2888
+7184706 drwxr-xr-x   9 cdima  staff     288 Apr 30 10:02 .
+7182388 drwxr-xr-x  13 cdima  staff     416 Apr 30 13:09 ..
+7184724 -rw-r--r--@  1 cdima  staff  998798 Apr 23  2019 1 - GIT Basic Training.pptx
+7184725 -rw-r--r--@  1 cdima  staff  219889 Apr 22  2019 2 - GIT tracking changes.pptx
+7184726 -rw-r--r--@  1 cdima  staff  201578 Apr 23  2019 3 - GIT branching.pptx
+7184729 -rw-r--r--@  1 cdima  staff     874 Apr 29 19:09 README.md
+7184727 -rw-r--r--@  1 cdima  staff   31053 Aug 31  2018 git_advanced_learning.txt
+7184728 -rw-r--r--@  1 cdima  staff    9842 Aug 27  2018 git_introduction_learning.txt
+7586082 -rw-r--r--@  1 cdima  staff     165 Apr 30 10:02 ~$1 - GIT Basic Training.pptx
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	~$1 - GIT Basic Training.pptx
+
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020/GIT
+bash-3.2$ ls -ila
+total 2888
+7184706 drwxr-xr-x   9 cdima  staff     288 Apr 30 10:02 .
+7182388 drwxr-xr-x  15 cdima  staff     480 Apr 30 14:36 ..
+7184724 -rw-r--r--@  1 cdima  staff  998798 Apr 23  2019 1 - GIT Basic Training.pptx
+7184725 -rw-r--r--@  1 cdima  staff  219889 Apr 22  2019 2 - GIT tracking changes.pptx
+7184726 -rw-r--r--@  1 cdima  staff  201578 Apr 23  2019 3 - GIT branching.pptx
+7184729 -rw-r--r--@  1 cdima  staff     874 Apr 29 19:09 README.md
+7184727 -rw-r--r--@  1 cdima  staff   31053 Aug 31  2018 git_advanced_learning.txt
+7184728 -rw-r--r--@  1 cdima  staff    9842 Aug 27  2018 git_introduction_learning.txt
+7586082 -rw-r--r--@  1 cdima  staff     165 Apr 30 10:02 ~$1 - GIT Basic Training.pptx
+bash-3.2$ cd ..
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:36 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 14:59 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+9319289 drwxr-xr-x   3 cdima  staff    96 Apr 30 14:38 LIGA_AC
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$ cd ..
+bash-3.2$ ls -ila
+total 80
+5540858 drwxr-xr-x  12 cdima  staff    384 Apr 30 13:25 .
+2408113 drwxr-xr-x+ 99 cdima  staff   3168 Apr 30 14:59 ..
+6633031 -rw-r--r--@  1 cdima  staff  10244 Apr 27 19:07 .DS_Store
+6883367 drwxr-xr-x   3 cdima  staff     96 Apr 28 13:40 DSL
+6595054 -rw-r--r--   1 cdima  staff   5248 Apr 27 13:13 GIT_Basics.md
+6627324 -rw-r--r--   1 cdima  staff   9545 Apr 29 18:33 LINUX_Basics.md
+5542070 drwxr-xr-x  19 cdima  staff    608 Apr 16 16:27 METABRANCH
+6800824 drwxr-xr-x   3 cdima  staff     96 Apr 28 10:24 REPOS_TEST
+7182388 drwxr-xr-x  15 cdima  staff    480 Apr 30 14:36 ac-labs-2020
+9312572 drwxr-xr-x   2 cdima  staff     64 Apr 30 13:25 ac-labs-test
+6597873 drwxr-xr-x  11 cdima  staff    352 Apr 27 13:19 mfo
+5542353 -rwxr-xr-x   1 cdima  staff   5762 Apr 16 16:47 multivalidator_state.json
+bash-3.2$ ls -ila
+total 80
+5540858 drwxr-xr-x  12 cdima  staff    384 Apr 30 13:25 .
+2408113 drwxr-xr-x+ 99 cdima  staff   3168 Apr 30 14:59 ..
+6633031 -rw-r--r--@  1 cdima  staff  10244 Apr 27 19:07 .DS_Store
+6883367 drwxr-xr-x   3 cdima  staff     96 Apr 28 13:40 DSL
+6595054 -rw-r--r--   1 cdima  staff   5248 Apr 27 13:13 GIT_Basics.md
+6627324 -rw-r--r--   1 cdima  staff   9545 Apr 29 18:33 LINUX_Basics.md
+5542070 drwxr-xr-x  19 cdima  staff    608 Apr 16 16:27 METABRANCH
+6800824 drwxr-xr-x   3 cdima  staff     96 Apr 28 10:24 REPOS_TEST
+7182388 drwxr-xr-x  15 cdima  staff    480 Apr 30 14:36 ac-labs-2020
+9312572 drwxr-xr-x   2 cdima  staff     64 Apr 30 13:25 ac-labs-test
+6597873 drwxr-xr-x  11 cdima  staff    352 Apr 27 13:19 mfo
+5542353 -rwxr-xr-x   1 cdima  staff   5762 Apr 16 16:47 multivalidator_state.json
+bash-3.2$ mkdir test
+bash-3.2$
+bash-3.2$
+bash-3.2$ clear
+bash-3.2$ cd test
+bash-3.2$
+bash-3.2$
+bash-3.2$ git clone git@baltig.nsn-net.net:amogoi/ac-labs-2020.git
+Cloning into 'ac-labs-2020'...
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+remote: Counting objects: 62, done.
+remote: Compressing objects: 100% (46/46), done.
+remote: Total 62 (delta 12), reused 54 (delta 10)
+Receiving objects: 100% (62/62), 1.37 MiB | 1.48 MiB/s, done.
+Resolving deltas: 100% (12/12), done.
+bash-3.2$ ls -ila
+total 0
+9321832 drwxr-xr-x   3 cdima  staff   96 Apr 30 15:01 .
+5540858 drwxr-xr-x  13 cdima  staff  416 Apr 30 15:01 ..
+9321853 drwxr-xr-x  14 cdima  staff  448 Apr 30 15:01 ac-labs-2020
+bash-3.2$ ac-labs-2020/
+bash: ac-labs-2020/: is a directory
+bash-3.2$ cd ac-labs-2020/
+bash-3.2$ ls -ila
+total 72
+9321853 drwxr-xr-x  14 cdima  staff   448 Apr 30 15:01 .
+9321832 drwxr-xr-x   3 cdima  staff    96 Apr 30 15:01 ..
+9321854 drwxr-xr-x  13 cdima  staff   416 Apr 30 15:01 .git
+9321921 -rw-r--r--   1 cdima  staff   247 Apr 30 15:01 .gitignore
+9321922 -rw-r--r--   1 cdima  staff  3564 Apr 30 15:01 Bash_Basics.md
+9321923 drwxr-xr-x   8 cdima  staff   256 Apr 30 15:01 GIT
+9321930 -rw-r--r--   1 cdima  staff  5196 Apr 30 15:01 GIT_Basics.md
+9321931 -rw-r--r--   1 cdima  staff  9628 Apr 30 15:01 LINUX_Basics.md
+9321932 drwxr-xr-x   3 cdima  staff    96 Apr 30 15:01 Linux_commands
+9321934 -rw-r--r--   1 cdima  staff  1325 Apr 30 15:01 Makefile_basics.md
+9321935 -rw-r--r--   1 cdima  staff   507 Apr 30 15:01 README.md
+9321936 drwxr-xr-x   3 cdima  staff    96 Apr 30 15:01 sesion_30_4_20
+9321938 drwxr-xr-x   7 cdima  staff   224 Apr 30 15:01 some_c_make_proj
+9321944 drwxr-xr-x   6 cdima  staff   192 Apr 30 15:01 some_python_client_sserver
+bash-3.2$ pwd
+/Users/cdima/NOKIA/test/ac-labs-2020
+bash-3.2$ git log
+bash-3.2$ git remote -v
+origin	git@baltig.nsn-net.net:amogoi/ac-labs-2020.git (fetch)
+origin	git@baltig.nsn-net.net:amogoi/ac-labs-2020.git (push)
+bash-3.2$ git pull
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+Already up to date.
+bash-3.2$ touch test1.txt
+bash-3.2$ git add test1.txt
+bash-3.2$ git commit -m "Test1"
+[master 32b45d4] Test1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.txt
+bash-3.2$ git log
+bash-3.2$ git push origin master
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 270 bytes | 270.00 KiB/s, done.
+Total 3 (delta 1), reused 1 (delta 0)
+To baltig.nsn-net.net:amogoi/ac-labs-2020.git
+   07c7f2d..32b45d4  master -> master
+bash-3.2$ git log
+bash-3.2$ git pull
+Warning: untrusted X11 forwarding setup failed: xauth key data not generated
+Already up to date.
+bash-3.2$ git lga
+bash-3.2$
+bash-3.2$
+bash-3.2$ git config --global alias.lol "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+bash-3.2$ git lol
+
+
+
+
+
+

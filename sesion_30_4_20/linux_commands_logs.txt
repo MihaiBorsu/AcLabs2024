@@ -1,0 +1,883 @@
+he default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ pwd
+/Users/cdima
+bash-3.2$ ls
+AcroRdrDC_1801120058_MUI.dmg		MyJabberFiles
+Apple_VPN				NOKIA
+Applications				Parallels
+Applications (Parallels)		Pictures
+Bebe					Public
+Beni					Remote_Desktop_Client_Apple
+Books					SVN_Repositories
+CASA					SidecarCorePatch
+Creative Cloud Files			Sites
+DIMA_Ciprian_Semnatura_mea1.JPG		TTS.txz
+DefaultFontFallbacks.plist.bak		Winamp-0.7.1.86.dmg
+Desktop					WineBottlerCombo_1.6.1.dmg
+Documents				__WORKING
+Downloads				aimp_4.51.2077.exe
+Dropbox					cipid2001.ovpn
+Google Drive				docker
+Google Drive (nepsios2016@gmail.com)	jenkins.tar.gz
+KiteOnboarding.py			mu_code
+Kitematic-Mac.zip			parola_Win10.txt
+Kituri					plan_2D_canalizare.PNG
+Library					svn_server.tar.gz
+LigaAC					svn_server.tar.gzdocker
+Mazda_CX7				talon_masina_Honda_Jazz2018.pdf
+Mire					test.sh
+Movies					zsh_with_powerlevel9k_pack.txt
+Music
+bash-3.2$ ls -l
+total 1180904
+-rw-r--r--@  1 cdima  staff  175101753 Aug 22  2018 AcroRdrDC_1801120058_MUI.dmg
+drwxr-xr-x  22 cdima  staff        704 May 18  2018 Apple_VPN
+drwx------@  5 cdima  staff        160 Dec 12 00:38 Applications
+drwx------@  4 cdima  staff        128 Dec 12 00:38 Applications (Parallels)
+drwxr-xr-x@ 13 cdima  staff        416 Feb 18  2019 Bebe
+drwxr-xr-x  14 cdima  staff        448 Apr 29 12:59 Beni
+drwxr-xr-x   8 cdima  staff        256 Apr 26 09:56 Books
+drwxr-xr-x  12 cdima  staff        384 Jan  2 18:55 CASA
+drwxrwxr-x@  3 cdima  staff         96 Feb 24  2019 Creative Cloud Files
+-rw-------   1 cdima  staff       2430 Dec 11  2017 DIMA_Ciprian_Semnatura_mea1.JPG
+-rw-r--r--@  1 cdima  staff       1762 May 27  2018 DefaultFontFallbacks.plist.bak
+drwx------@ 56 cdima  staff       1792 Apr 30 12:22 Desktop
+drwx------@ 10 cdima  staff        320 Feb 15 22:32 Documents
+drwx------@ 66 cdima  staff       2112 Apr 30 13:23 Downloads
+drwx------@ 28 cdima  staff        896 Apr 26 09:56 Dropbox
+drwxr-xr-x@ 48 cdima  staff       1536 Apr 26 09:55 Google Drive
+drwxr-xr-x@ 13 cdima  staff        416 Apr 26 09:52 Google Drive (nepsios2016@gmail.com)
+-rwxr-xr-x   1 cdima  staff       3802 Feb  4  2019 KiteOnboarding.py
+-rw-r--r--@  1 cdima  staff   47052941 Aug 15  2018 Kitematic-Mac.zip
+drwxr-xr-x  76 cdima  staff       2432 Mar 16 18:06 Kituri
+drwx------@ 83 cdima  staff       2656 Apr 22 17:43 Library
+drwxr-xr-x   4 cdima  staff        128 Apr 29 19:04 LigaAC
+drwxr-xr-x   3 cdima  staff         96 Jan  1 18:38 Mazda_CX7
+drwxr-xr-x   4 cdima  staff        128 Jan  9 19:46 Mire
+drwx------+  9 cdima  staff        288 Mar 15 11:57 Movies
+drwx------+ 11 cdima  staff        352 Mar 15 12:00 Music
+drwxr-xr-x   3 cdima  staff         96 Feb 19  2019 MyJabberFiles
+drwxr-xr-x  12 cdima  staff        384 Apr 30 13:25 NOKIA
+drwx------   3 cdima  staff         96 Mar 15 11:59 Parallels
+drwx------+ 11 cdima  staff        352 Jan  5 21:26 Pictures
+drwxr-xr-x+  4 cdima  staff        128 May 18  2018 Public
+drwxr-xr-x@  3 cdima  staff         96 Feb 19  2019 Remote_Desktop_Client_Apple
+drwxr-xr-x   5 cdima  staff        160 Feb 28 23:09 SVN_Repositories
+drwxr-xr-x   6 cdima  staff        192 Oct 27  2019 SidecarCorePatch
+drwxr-xr-x+  3 cdima  staff         96 Mar 16 00:27 Sites
+-rw-r--r--@  1 cdima  staff     595588 Apr 29 12:54 TTS.txz
+-rw-r--r--@  1 cdima  staff    3064196 May 28  2018 Winamp-0.7.1.86.dmg
+-rw-r--r--@  1 cdima  staff  127933736 Mar 15  2017 WineBottlerCombo_1.6.1.dmg
+drwxr-xr-x   4 cdima  staff        128 May 27  2018 __WORKING
+-rw-r--r--@  1 cdima  staff   10689976 May 28  2018 aimp_4.51.2077.exe
+-rw-r--r--@  1 cdima  staff       6395 Jan  1  2019 cipid2001.ovpn
+drwxr-xr-x   7 cdima  staff        224 Feb 14  2019 docker
+-rw-r--r--   1 cdima  staff  218017250 Feb  4  2019 jenkins.tar.gz
+drwxr-xr-x   7 cdima  staff        224 Feb 15 10:23 mu_code
+-rw-r--r--@  1 cdima  staff         38 May 20  2018 parola_Win10.txt
+-rw-r--r--@  1 cdima  staff     147689 Aug 12  2018 plan_2D_canalizare.PNG
+-rw-r--r--   1 cdima  staff         20 Feb  5  2019 svn_server.tar.gz
+-rw-r--r--   1 cdima  staff          0 Feb  5  2019 svn_server.tar.gzdocker
+-rw-r--r--@  1 cdima  staff    1768651 May 22  2018 talon_masina_Honda_Jazz2018.pdf
+-rw-r--r--   1 cdima  staff        109 Feb 28 23:52 test.sh
+-rw-r--r--@  1 cdima  staff       3148 Jan  6  2019 zsh_with_powerlevel9k_pack.txt
+bash-3.2$ ls -a
+.					Applications
+..					Applications (Parallels)
+.CFUserTextEncoding			Bebe
+.DS_Store				Beni
+.DVDVideoSoft				Books
+.Trash					CASA
+.Xauthority				Creative Cloud Files
+.atom					DIMA_Ciprian_Semnatura_mea1.JPG
+.bash_history				DefaultFontFallbacks.plist.bak
+.bash_sessions				Desktop
+.cache					Documents
+.config					Downloads
+.cups					Dropbox
+.docker					Google Drive
+.dropbox				Google Drive (nepsios2016@gmail.com)
+.gitconfig				KiteOnboarding.py
+.idlerc					Kitematic-Mac.zip
+.iterm2					Kituri
+.iterm2_shell_integration.zsh		Library
+.kite					LigaAC
+.kodi					Mazda_CX7
+.local					Mire
+.mume					Movies
+.ncftp					Music
+.oh-my-zsh				MyJabberFiles
+.openvpn-connect.json			NOKIA
+.oracle_jre_usage			Parallels
+.putty					Pictures
+.snmp					Public
+.snmp-persistent			Remote_Desktop_Client_Apple
+.ssh					SVN_Repositories
+.subversion				SidecarCorePatch
+.vim					Sites
+.viminfo				TTS.txz
+.vscode					Winamp-0.7.1.86.dmg
+.wine					WineBottlerCombo_1.6.1.dmg
+.zcompdump-Godzilla-5.3			__WORKING
+.zcompdump-Godzilla-5.5.1		aimp_4.51.2077.exe
+.zcompdump-Godzilla-5.7.1		cipid2001.ovpn
+.zcompdump-Pinero-5.7.1			docker
+.zprofile				jenkins.tar.gz
+.zsh_history				mu_code
+.zshrc					parola_Win10.txt
+.zshrc_Cipi				plan_2D_canalizare.PNG
+.zshrc_clovis				svn_server.tar.gz
+.zshrc_orig				svn_server.tar.gzdocker
+.zshrc_power				talon_masina_Honda_Jazz2018.pdf
+.zshrc_test1				test.sh
+AcroRdrDC_1801120058_MUI.dmg		zsh_with_powerlevel9k_pack.txt
+Apple_VPN
+bash-3.2$ ls
+AcroRdrDC_1801120058_MUI.dmg		MyJabberFiles
+Apple_VPN				NOKIA
+Applications				Parallels
+Applications (Parallels)		Pictures
+Bebe					Public
+Beni					Remote_Desktop_Client_Apple
+Books					SVN_Repositories
+CASA					SidecarCorePatch
+Creative Cloud Files			Sites
+DIMA_Ciprian_Semnatura_mea1.JPG		TTS.txz
+DefaultFontFallbacks.plist.bak		Winamp-0.7.1.86.dmg
+Desktop					WineBottlerCombo_1.6.1.dmg
+Documents				__WORKING
+Downloads				aimp_4.51.2077.exe
+Dropbox					cipid2001.ovpn
+Google Drive				docker
+Google Drive (nepsios2016@gmail.com)	jenkins.tar.gz
+KiteOnboarding.py			mu_code
+Kitematic-Mac.zip			parola_Win10.txt
+Kituri					plan_2D_canalizare.PNG
+Library					svn_server.tar.gz
+LigaAC					svn_server.tar.gzdocker
+Mazda_CX7				talon_masina_Honda_Jazz2018.pdf
+Mire					test.sh
+Movies					zsh_with_powerlevel9k_pack.txt
+Music
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls
+AcroRdrDC_1801120058_MUI.dmg		MyJabberFiles
+Apple_VPN				NOKIA
+Applications				Parallels
+Applications (Parallels)		Pictures
+Bebe					Public
+Beni					Remote_Desktop_Client_Apple
+Books					SVN_Repositories
+CASA					SidecarCorePatch
+Creative Cloud Files			Sites
+DIMA_Ciprian_Semnatura_mea1.JPG		TTS.txz
+DefaultFontFallbacks.plist.bak		Winamp-0.7.1.86.dmg
+Desktop					WineBottlerCombo_1.6.1.dmg
+Documents				__WORKING
+Downloads				aimp_4.51.2077.exe
+Dropbox					cipid2001.ovpn
+Google Drive				docker
+Google Drive (nepsios2016@gmail.com)	jenkins.tar.gz
+KiteOnboarding.py			mu_code
+Kitematic-Mac.zip			parola_Win10.txt
+Kituri					plan_2D_canalizare.PNG
+Library					svn_server.tar.gz
+LigaAC					svn_server.tar.gzdocker
+Mazda_CX7				talon_masina_Honda_Jazz2018.pdf
+Mire					test.sh
+Movies					zsh_with_powerlevel9k_pack.txt
+Music
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls
+AcroRdrDC_1801120058_MUI.dmg		MyJabberFiles
+Apple_VPN				NOKIA
+Applications				Parallels
+Applications (Parallels)		Pictures
+Bebe					Public
+Beni					Remote_Desktop_Client_Apple
+Books					SVN_Repositories
+CASA					SidecarCorePatch
+Creative Cloud Files			Sites
+DIMA_Ciprian_Semnatura_mea1.JPG		TTS.txz
+DefaultFontFallbacks.plist.bak		Winamp-0.7.1.86.dmg
+Desktop					WineBottlerCombo_1.6.1.dmg
+Documents				__WORKING
+Downloads				aimp_4.51.2077.exe
+Dropbox					cipid2001.ovpn
+Google Drive				docker
+Google Drive (nepsios2016@gmail.com)	jenkins.tar.gz
+KiteOnboarding.py			mu_code
+Kitematic-Mac.zip			parola_Win10.txt
+Kituri					plan_2D_canalizare.PNG
+Library					svn_server.tar.gz
+LigaAC					svn_server.tar.gzdocker
+Mazda_CX7				talon_masina_Honda_Jazz2018.pdf
+Mire					test.sh
+Movies					zsh_with_powerlevel9k_pack.txt
+Music
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$ pwd
+/Users/cdima
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 1181656
+2408113 drwxr-xr-x+ 99 cdima  staff       3168 Apr 30 13:32 .
+ 721407 drwxr-xr-x   8 root   admin        256 Jan 23 14:47 ..
+2408147 -r--------   1 cdima  staff          7 Mar 15 01:48 .CFUserTextEncoding
+2408148 -rw-r--r--@  1 cdima  staff      36868 Apr 29 22:11 .DS_Store
+2408149 drwxr-xr-x   8 cdima  staff        256 Jan  5 21:21 .DVDVideoSoft
+5555970 drwx------   4 cdima  staff        128 Apr 29 19:10 .Trash
+2408162 -rw-------   1 cdima  staff       1512 Jan 26  2019 .Xauthority
+2408160 drwxr-xr-x  16 cdima  staff        512 Dec 16 12:03 .atom
+2415979 -rw-------   1 cdima  staff       7765 Apr 30 13:24 .bash_history
+2415976 drwx------  18 cdima  staff        576 Jan 26  2019 .bash_sessions
+2415994 drwxr-xr-x   4 cdima  staff        128 Jan  5 20:59 .cache
+2416004 drwxr-xr-x   7 cdima  staff        224 Feb  5  2019 .config
+2416026 drwx------   3 cdima  staff         96 Jan 30 22:21 .cups
+2416029 drwxr-xr-x   5 cdima  staff        160 Apr 29 10:06 .docker
+2416035 drwx------  14 cdima  staff        448 Mar 27 12:05 .dropbox
+9313309 -rw-r--r--   1 cdima  staff        349 Apr 30 13:32 .gitconfig
+2416078 drwxr-xr-x   4 cdima  staff        128 Jan  8  2019 .idlerc
+2416081 drwxr-xr-x  13 cdima  staff        416 May 27  2018 .iterm2
+2416095 -rwxr-xr-x   1 cdima  staff       6373 Feb  4  2019 .iterm2_shell_integration.zsh
+2416094 drwxr-xr-x  13 cdima  staff        416 Feb 28 23:51 .kite
+2416107 drwxr-xr-x   3 cdima  staff         96 Dec 26  2018 .kodi
+2416149 drwxr-xr-x   3 cdima  staff         96 May 17  2018 .local
+6586022 drwxr-xr-x   8 cdima  staff        256 Apr 27 10:53 .mume
+2416235 drwxr-xr-x  11 cdima  staff        352 Dec 26  2018 .ncftp
+2416246 drwxr-xr-x  16 cdima  staff        512 Jun 17  2018 .oh-my-zsh
+2417410 -rw-r--r--   1 cdima  staff        355 Jan  1  2019 .openvpn-connect.json
+2417409 drwxr-xr-x   5 cdima  staff        160 May 13  2019 .oracle_jre_usage
+2417414 drwx------   3 cdima  staff         96 Feb  5  2019 .putty
+2417416 drwxr-xr-x   3 cdima  staff         96 Jan 30  2019 .snmp
+2417418 drwx------   3 cdima  staff         96 Jan 30  2019 .snmp-persistent
+2417421 drwx------  11 cdima  staff        352 Jun 30  2018 .ssh
+2417435 drwxr-xr-x   6 cdima  staff        192 Feb  2  2019 .subversion
+2417447 drwxr-xr-x   4 cdima  staff        128 Feb  4  2019 .vim
+7187039 -rw-------   1 cdima  staff      13786 Apr 29 19:12 .viminfo
+2417491 drwxr-xr-x   4 cdima  staff        128 Dec  4 00:34 .vscode
+2437060 drwxr-xr-x   8 cdima  staff        256 May 17  2018 .wine
+2440396 -rw-r--r--   1 cdima  staff      40604 Jun 17  2018 .zcompdump-Godzilla-5.3
+2440398 -rw-r--r--   1 cdima  staff      44136 Jan 26  2019 .zcompdump-Godzilla-5.5.1
+2440399 -rw-r--r--   1 cdima  staff      46649 Oct 10  2019 .zcompdump-Godzilla-5.7.1
+3891343 -rw-r--r--   1 cdima  staff      46649 Mar 16 02:14 .zcompdump-Pinero-5.7.1
+2440401 -rw-r--r--   1 cdima  staff        164 Jan  8  2019 .zprofile
+9053364 -rw-------   1 cdima  staff      59814 Apr 30 13:26 .zsh_history
+2440402 -rw-r--r--   1 cdima  staff       7777 Feb  4  2019 .zshrc
+2440403 -rw-r--r--   1 cdima  staff       7649 May 27  2018 .zshrc_Cipi
+2440404 -rw-r--r--   1 cdima  staff       4635 May 27  2018 .zshrc_clovis
+2440405 -rw-r--r--   1 cdima  staff       3133 May 27  2018 .zshrc_orig
+2440406 -rw-r--r--   1 cdima  staff       6236 May 27  2018 .zshrc_power
+2440407 -rw-r--r--   1 cdima  staff       4769 May 27  2018 .zshrc_test1
+2440408 -rw-r--r--@  1 cdima  staff  175101753 Aug 22  2018 AcroRdrDC_1801120058_MUI.dmg
+2440416 drwxr-xr-x  22 cdima  staff        704 May 18  2018 Apple_VPN
+2440436 drwx------@  5 cdima  staff        160 Dec 12 00:38 Applications
+2440438 drwx------@  4 cdima  staff        128 Dec 12 00:38 Applications (Parallels)
+2440459 drwxr-xr-x@ 13 cdima  staff        416 Feb 18  2019 Bebe
+5563239 drwxr-xr-x  14 cdima  staff        448 Apr 29 12:59 Beni
+2440472 drwxr-xr-x   8 cdima  staff        256 Apr 26 09:56 Books
+2440478 drwxr-xr-x  12 cdima  staff        384 Jan  2 18:55 CASA
+2440499 drwxrwxr-x@  3 cdima  staff         96 Feb 24  2019 Creative Cloud Files
+2440505 -rw-------   1 cdima  staff       2430 Dec 11  2017 DIMA_Ciprian_Semnatura_mea1.JPG
+2440506 -rw-r--r--@  1 cdima  staff       1762 May 27  2018 DefaultFontFallbacks.plist.bak
+2440503 drwx------@ 56 cdima  staff       1792 Apr 30 12:22 Desktop
+2441105 drwx------@ 10 cdima  staff        320 Feb 15 22:32 Documents
+3018672 drwx------@ 66 cdima  staff       2112 Apr 30 13:23 Downloads
+4480495 drwx------@ 28 cdima  staff        896 Apr 26 09:56 Dropbox
+3915960 drwxr-xr-x@ 48 cdima  staff       1536 Apr 26 09:55 Google Drive
+3915970 drwxr-xr-x@ 13 cdima  staff        416 Apr 26 09:52 Google Drive (nepsios2016@gmail.com)
+2441123 -rwxr-xr-x   1 cdima  staff       3802 Feb  4  2019 KiteOnboarding.py
+2441124 -rw-r--r--@  1 cdima  staff   47052941 Aug 15  2018 Kitematic-Mac.zip
+4062843 drwxr-xr-x  76 cdima  staff       2432 Mar 16 18:06 Kituri
+2441125 drwx------@ 83 cdima  staff       2656 Apr 22 17:43 Library
+7178472 drwxr-xr-x   4 cdima  staff        128 Apr 29 19:04 LigaAC
+2958706 drwxr-xr-x   3 cdima  staff         96 Jan  1 18:38 Mazda_CX7
+2958707 drwxr-xr-x   4 cdima  staff        128 Jan  9 19:46 Mire
+2958714 drwx------+  9 cdima  staff        288 Mar 15 11:57 Movies
+2958741 drwx------+ 11 cdima  staff        352 Mar 15 12:00 Music
+2959025 drwxr-xr-x   3 cdima  staff         96 Feb 19  2019 MyJabberFiles
+5540858 drwxr-xr-x  12 cdima  staff        384 Apr 30 13:25 NOKIA
+2959032 drwx------   3 cdima  staff         96 Mar 15 11:59 Parallels
+2959033 drwx------+ 11 cdima  staff        352 Jan  5 21:26 Pictures
+2959252 drwxr-xr-x+  4 cdima  staff        128 May 18  2018 Public
+2959255 drwxr-xr-x@  3 cdima  staff         96 Feb 19  2019 Remote_Desktop_Client_Apple
+2959258 drwxr-xr-x   5 cdima  staff        160 Feb 28 23:09 SVN_Repositories
+2965203 drwxr-xr-x   6 cdima  staff        192 Oct 27  2019 SidecarCorePatch
+3018674 drwxr-xr-x+  3 cdima  staff         96 Mar 16 00:27 Sites
+7161476 -rw-r--r--@  1 cdima  staff     595588 Apr 29 12:54 TTS.txz
+2965412 -rw-r--r--@  1 cdima  staff    3064196 May 28  2018 Winamp-0.7.1.86.dmg
+2965413 -rw-r--r--@  1 cdima  staff  127933736 Mar 15  2017 WineBottlerCombo_1.6.1.dmg
+2965414 drwxr-xr-x   4 cdima  staff        128 May 27  2018 __WORKING
+2965426 -rw-r--r--@  1 cdima  staff   10689976 May 28  2018 aimp_4.51.2077.exe
+2965428 -rw-r--r--@  1 cdima  staff       6395 Jan  1  2019 cipid2001.ovpn
+2965427 drwxr-xr-x   7 cdima  staff        224 Feb 14  2019 docker
+3018619 -rw-r--r--   1 cdima  staff  218017250 Feb  4  2019 jenkins.tar.gz
+3018620 drwxr-xr-x   7 cdima  staff        224 Feb 15 10:23 mu_code
+3018629 -rw-r--r--@  1 cdima  staff         38 May 20  2018 parola_Win10.txt
+3018631 -rw-r--r--@  1 cdima  staff     147689 Aug 12  2018 plan_2D_canalizare.PNG
+3018630 -rw-r--r--   1 cdima  staff         20 Feb  5  2019 svn_server.tar.gz
+3018632 -rw-r--r--   1 cdima  staff          0 Feb  5  2019 svn_server.tar.gzdocker
+3018633 -rw-r--r--@  1 cdima  staff    1768651 May 22  2018 talon_masina_Honda_Jazz2018.pdf
+3018635 -rw-r--r--   1 cdima  staff        109 Feb 28 23:52 test.sh
+3018634 -rw-r--r--@  1 cdima  staff       3148 Jan  6  2019 zsh_with_powerlevel9k_pack.txt
+bash-3.2$ cd NOKIA/
+bash-3.2$ pwd
+/Users/cdima/NOKIA
+bash-3.2$ clear
+bash-3.2$ pwd
+/Users/cdima/NOKIA
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 80
+5540858 drwxr-xr-x  12 cdima  staff    384 Apr 30 13:25 .
+2408113 drwxr-xr-x+ 99 cdima  staff   3168 Apr 30 13:32 ..
+6633031 -rw-r--r--@  1 cdima  staff  10244 Apr 27 19:07 .DS_Store
+6883367 drwxr-xr-x   3 cdima  staff     96 Apr 28 13:40 DSL
+6595054 -rw-r--r--   1 cdima  staff   5248 Apr 27 13:13 GIT_Basics.md
+6627324 -rw-r--r--   1 cdima  staff   9545 Apr 29 18:33 LINUX_Basics.md
+5542070 drwxr-xr-x  19 cdima  staff    608 Apr 16 16:27 METABRANCH
+6800824 drwxr-xr-x   3 cdima  staff     96 Apr 28 10:24 REPOS_TEST
+7182388 drwxr-xr-x  13 cdima  staff    416 Apr 30 13:09 ac-labs-2020
+9312572 drwxr-xr-x   2 cdima  staff     64 Apr 30 13:25 ac-labs-test
+6597873 drwxr-xr-x  11 cdima  staff    352 Apr 27 13:19 mfo
+5542353 -rwxr-xr-x   1 cdima  staff   5762 Apr 16 16:47 multivalidator_state.json
+bash-3.2$ cd ac-labs-
+ac-labs-2020/ ac-labs-test/
+bash-3.2$ cd ac-labs-2020/
+bash-3.2$ ls -ila
+total 72
+7182388 drwxr-xr-x  13 cdima  staff   416 Apr 30 13:09 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$ touch test.txt
+bash-3.2$ ls
+Bash_Basics.md			Linux_commands			some_python_client_sserver
+GIT				Makefile_basics.md		test.txt
+GIT_Basics.md			README.md
+LINUX_Basics.md			some_c_make_proj
+bash-3.2$ ls -ila
+total 72
+7182388 drwxr-xr-x  14 cdima  staff   448 Apr 30 14:27 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318285 -rw-r--r--   1 cdima  staff     0 Apr 30 14:27 test.txt
+bash-3.2$ clear
+test
+bash-3.2$ ls -ila
+total 72
+7182388 drwxr-xr-x  14 cdima  staff   448 Apr 30 14:27 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318285 -rw-r--r--   1 cdima  staff     0 Apr 30 14:27 test.txt
+bash-3.2$ vi test.txt
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  14 cdima  staff   448 Apr 30 14:29 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318514 -rw-r--r--   1 cdima  staff    23 Apr 30 14:29 test.txt
+bash-3.2$ cat test.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ touch test1.txt
+bash-3.2$ cat test.txt > test1.txt
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ cat test.txt >> test1.txt
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+test
+liga ac
+djjsjs
+
+bash-3.2$ cat test.txt > test1.txt
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$ ls -ila
+total 88
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:29 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318514 -rw-r--r--   1 cdima  staff    23 Apr 30 14:29 test.txt
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:32 test1.txt
+bash-3.2$ cat test.txt >> test1.txt
+bash-3.2$ cat test.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+test
+liga ac
+djjsjs
+
+bash-3.2$ diff test.txt test1.txt
+4a5,8
+> test
+> liga ac
+> djjsjs
+>
+bash-3.2$ cat test.txt > test1.txt
+bash-3.2$ cat test.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ diff test.txt test1.txt
+bash-3.2$ clear
+bash-3.2$
+bash-3.2$
+bash-3.2$ mv test.txt liga.txt
+bash-3.2$ ls -ila
+total 88
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:34 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9318514 -rw-r--r--   1 cdima  staff    23 Apr 30 14:29 liga.txt
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ cat liga.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ rm liga.txt
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  14 cdima  staff   448 Apr 30 14:35 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ mkdir LIGA_AC
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:35 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+9319213 drwxr-xr-x   2 cdima  staff    64 Apr 30 14:35 LIGA_AC
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ clear
+bash-3.2$ ls
+Bash_Basics.md			LINUX_Basics.md			some_c_make_proj
+GIT				Linux_commands			some_python_client_sserver
+GIT_Basics.md			Makefile_basics.md		test1.txt
+LIGA_AC				README.md
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:35 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+9319213 drwxr-xr-x   2 cdima  staff    64 Apr 30 14:35 LIGA_AC
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$
+bash-3.2$ rm -rf LI
+LIGA_AC/         LINUX_Basics.md
+bash-3.2$ rm -rf LIGA_AC
+bash-3.2$ mkdir LIGA_AC
+bash-3.2$ cd LIGA_AC
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020/LIGA_AC
+bash-3.2$ ls -ila
+total 0
+9319289 drwxr-xr-x   2 cdima  staff   64 Apr 30 14:36 .
+7182388 drwxr-xr-x  15 cdima  staff  480 Apr 30 14:36 ..
+bash-3.2$ cd ..
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:36 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+9319289 drwxr-xr-x   2 cdima  staff    64 Apr 30 14:36 LIGA_AC
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ cd LI
+LIGA_AC/         LINUX_Basics.md
+bash-3.2$ cd LIGA_AC/
+bash-3.2$ clear
+bash-3.2$ ls -ila
+total 0
+9319289 drwxr-xr-x   2 cdima  staff   64 Apr 30 14:36 .
+7182388 drwxr-xr-x  15 cdima  staff  480 Apr 30 14:36 ..
+bash-3.2$
+bash-3.2$
+bash-3.2$
+bash-3.2$ cp ../
+.git/                       LIGA_AC/                    some_c_make_proj/
+.gitignore                  LINUX_Basics.md             some_python_client_sserver/
+Bash_Basics.md              Linux_commands/             test1.txt
+GIT/                        Makefile_basics.md
+GIT_Basics.md               README.md
+bash-3.2$ cp ../
+.git/                       LIGA_AC/                    some_c_make_proj/
+.gitignore                  LINUX_Basics.md             some_python_client_sserver/
+Bash_Basics.md              Linux_commands/             test1.txt
+GIT/                        Makefile_basics.md
+GIT_Basics.md               README.md
+bash-3.2$ cp ../
+.git/                       LIGA_AC/                    some_c_make_proj/
+.gitignore                  LINUX_Basics.md             some_python_client_sserver/
+Bash_Basics.md              Linux_commands/             test1.txt
+GIT/                        Makefile_basics.md
+GIT_Basics.md               README.md
+bash-3.2$ cp ../test1.txt /Users/
+.localized  Guest/      Shared/     cdima/      macports/   pinerotech/
+bash-3.2$ cp ../test1.txt /Users/cdima/NOKIA/
+.DS_Store                  METABRANCH/                mfo/
+DSL/                       REPOS_TEST/                multivalidator_state.json
+GIT_Basics.md              ac-labs-2020/
+LINUX_Basics.md            ac-labs-test/
+bash-3.2$ cp ../test1.txt /Users/cdima/NOKIA/ac-labs-2020/LI
+LIGA_AC/         LINUX_Basics.md
+bash-3.2$ cp ../test1.txt .
+bash-3.2$ ls -ila
+total 8
+9319289 drwxr-xr-x   3 cdima  staff   96 Apr 30 14:38 .
+7182388 drwxr-xr-x  15 cdima  staff  480 Apr 30 14:36 ..
+9319548 -rw-r--r--   1 cdima  staff   23 Apr 30 14:38 test1.txt
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020/LIGA_AC
+bash-3.2$ cd ~
+bash-3.2$ pwd
+/Users/cdima
+bash-3.2$ cd -
+/Users/cdima/NOKIA/ac-labs-2020/LIGA_AC
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020/LIGA_AC
+bash-3.2$ ls -ila
+total 8
+9319289 drwxr-xr-x   3 cdima  staff   96 Apr 30 14:38 .
+7182388 drwxr-xr-x  15 cdima  staff  480 Apr 30 14:36 ..
+9319548 -rw-r--r--   1 cdima  staff   23 Apr 30 14:38 test1.txt
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ clear
+bash-3.2$
+
+LS(1)                     BSD General Commands Manual                    LS(1)
+
+NAME
+     ls -- list directory contents
+
+LS(1)                     BSD General Commands Manual                    LS(1)
+
+NAME
+     ls -- list directory contents
+
+SYNOPSIS
+     ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1%] [file ...]
+
+DESCRIPTION
+     For each operand that names a file of a type other than directory, ls displays its
+     name as well as any requested, associated information.  For each operand that names a
+     file of type directory, ls displays the names of files contained within that direc-
+     tory, as well as any requested, associated information.
+
+     If no operands are given, the contents of the current directory are displayed.  If
+     more than one operand is given, non-directory operands are displayed first; directory
+     and non-directory operands are sorted separately and in lexicographical order.
+
+     The following options are available:
+
+     -@      Display extended attribute keys and sizes in long (-l) output.
+
+     -1      (The numeric digit ``one''.)  Force output to be one entry per line.  This is
+             the default when output is not to a terminal.
+
+     -A      List all entries except for . and ...  Always set for the super-user.
+
+     -a      Include directory entries whose names begin with a dot (.).
+
+     -B      Force printing of non-printable characters (as defined by ctype(3) and current
+             locale settings) in file names as \xxx, where xxx is the numeric value of the
+             character in octal.
+
+     -b      As -B, but use C escape codes whenever possible.
+
+     -C      Force multi-column output; this is the default when output is to a terminal.
+
+     -c      Use time when file status was last changed for sorting (-t) or long printing
+             (-l).
+
+     -d      Directories are listed as plain files (not searched recursively).
+
+     -e      Print the Access Control List (ACL) associated with the file, if present, in
+             long (-l) output.
+
+     -F      Display a slash (`/') immediately after each pathname that is a directory, an
+             asterisk (`*') after each that is executable, an at sign (`@') after each sym-
+             bolic link, an equals sign (`=') after each socket, a percent sign (`%') after
+             each whiteout, and a vertical bar (`|') after each that is a FIFO.
+
+     -f      Output is not sorted.  This option turns on the -a option.
+
+     -G      Enable colorized output.  This option is equivalent to defining CLICOLOR in
+             the environment.  (See below.)
+
+     -g      This option is only available for compatibility with POSIX; it is used to dis-
+             play the group name in the long (-l) format output (the owner name is sup-
+             pressed).
+
+     -H      Symbolic links on the command line are followed.  This option is assumed if
+             none of the -F, -d, or -l options are specified.
+
+     -h      When used with the -l option, use unit suffixes: Byte, Kilobyte, Megabyte,
+             Gigabyte, Terabyte and Petabyte in order to reduce the number of digits to
+             three or less using base 2 for sizes.
+
+     -i      For each file, print the file's file serial number (inode number).
+
+     -k      If the -s option is specified, print the file size allocation in kilobytes,
+             not blocks.  This option overrides the environment variable BLOCKSIZE.
+
+     -L      Follow all symbolic links to final target and list the file or directory the
+
+     -L      Follow all symbolic links to final target and list the file or directory the
+bash-3.2$
+bash-3.2$ sort test1.txt
+
+djjsjs
+liga ac
+test
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ wc -l test1.txt
+       4 test1.txt
+bash-3.2$
+bash-3.2$
+bash-3.2$ cat test1.txt
+test
+liga ac
+djjsjs
+
+bash-3.2$ cat test1.txt | wc -l
+       4
+bash-3.2$ tac test1.txt
+bash: tac: command not found
+bash-3.2$ grep liga test1.txt
+liga ac
+bash-3.2$ ls -ila
+total 8
+9319289 drwxr-xr-x   3 cdima  staff   96 Apr 30 14:38 .
+7182388 drwxr-xr-x  15 cdima  staff  480 Apr 30 14:36 ..
+9319548 -rw-r--r--   1 cdima  staff   23 Apr 30 14:38 test1.txt
+bash-3.2$ cd ..
+bash-3.2$ ls -ila
+total 80
+7182388 drwxr-xr-x  15 cdima  staff   480 Apr 30 14:36 .
+5540858 drwxr-xr-x  12 cdima  staff   384 Apr 30 13:25 ..
+7182389 drwxr-xr-x  16 cdima  staff   512 Apr 30 13:34 .git
+9310532 -rw-r--r--   1 cdima  staff   247 Apr 30 13:09 .gitignore
+9310533 -rw-r--r--   1 cdima  staff  3564 Apr 30 13:09 Bash_Basics.md
+7184706 drwxr-xr-x   9 cdima  staff   288 Apr 30 10:02 GIT
+7182459 -rw-r--r--   1 cdima  staff  5196 Apr 29 18:36 GIT_Basics.md
+9319289 drwxr-xr-x   3 cdima  staff    96 Apr 30 14:38 LIGA_AC
+7186963 -rw-r--r--   1 cdima  staff  9628 Apr 29 19:11 LINUX_Basics.md
+7185346 drwxr-xr-x   3 cdima  staff    96 Apr 29 19:04 Linux_commands
+9310534 -rw-r--r--   1 cdima  staff  1325 Apr 30 13:09 Makefile_basics.md
+9310535 -rw-r--r--   1 cdima  staff   507 Apr 30 13:09 README.md
+9310536 drwxr-xr-x   7 cdima  staff   224 Apr 30 13:09 some_c_make_proj
+9310542 drwxr-xr-x   6 cdima  staff   192 Apr 30 13:09 some_python_client_sserver
+9318563 -rw-r--r--   1 cdima  staff    23 Apr 30 14:34 test1.txt
+bash-3.2$ grep -ri liga .
+./LIGA_AC/test1.txt:liga ac
+./test1.txt:liga ac
+bash-3.2$ grep --help
+usage: grep [-abcDEFGHhIiJLlmnOoqRSsUVvwxZ] [-A num] [-B num] [-C[num]]
+	[-e pattern] [-f file] [--binary-files=value] [--color=when]
+	[--context[=num]] [--directories=action] [--label] [--line-buffered]
+	[--null] [pattern] [file ...]
+bash-3.2$ ls --help
+ls: illegal option -- -
+usage: ls [-@ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1%] [file ...]
+bash-3.2$ man ls
+bash-3.2$ clear
+bash-3.2$ pwd
+/Users/cdima/NOKIA/ac-labs-2020
+bash-3.2$
+bash-3.2$
+bash-3.2$ cd ..
+bash-3.2$ pwd
+/Users/cdima/NOKIA
+bash-3.2$ ls -ila
+total 80
+5540858 drwxr-xr-x  12 cdima  staff    384 Apr 30 13:25 .
+2408113 drwxr-xr-x+ 99 cdima  staff   3168 Apr 30 14:29 ..
+6633031 -rw-r--r--@  1 cdima  staff  10244 Apr 27 19:07 .DS_Store
+6883367 drwxr-xr-x   3 cdima  staff     96 Apr 28 13:40 DSL
+6595054 -rw-r--r--   1 cdima  staff   5248 Apr 27 13:13 GIT_Basics.md
+6627324 -rw-r--r--   1 cdima  staff   9545 Apr 29 18:33 LINUX_Basics.md
+5542070 drwxr-xr-x  19 cdima  staff    608 Apr 16 16:27 METABRANCH
+6800824 drwxr-xr-x   3 cdima  staff     96 Apr 28 10:24 REPOS_TEST
+7182388 drwxr-xr-x  15 cdima  staff    480 Apr 30 14:36 ac-labs-2020
+9312572 drwxr-xr-x   2 cdima  staff     64 Apr 30 13:25 ac-labs-test
+6597873 drwxr-xr-x  11 cdima  staff    352 Apr 27 13:19 mfo
+5542353 -rwxr-xr-x   1 cdima  staff   5762 Apr 16 16:47 multivalidator_state.json
+bash-3.2$ find . -name test1.txt
+./ac-labs-2020/LIGA_AC/test1.txt
+./ac-labs-2020/test1.txt
+bash-3.2$ find . -type f -name test1.txt
+./ac-labs-2020/LIGA_AC/test1.txt
+./ac-labs-2020/test1.txt
+bash-3.2$ find . -type d -name test1.txt
+bash-3.2$ find . -type d -name LIGA*
+./ac-labs-2020/LIGA_AC
+bash-3.2$
+
+
+
+
+
+
+
+
