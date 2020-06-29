@@ -6,7 +6,6 @@ Basic training to get you started with scripting in Linux and how to setup a eff
 ## Pre-requisites
 A Linux/Unix terminal like Windows 10 with Linux subsystem, a Linux OS or a Mac.
 
-
 ## Topics
 
 Basic Linux terminal training
