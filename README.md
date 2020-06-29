@@ -1,5 +1,6 @@
 # Scripting with Linux and GIT
 
+
 Basic training to get you started with scripting in Linux and how to setup a efficient workspace to run and test your projects.
 
 ## Pre-requisites
