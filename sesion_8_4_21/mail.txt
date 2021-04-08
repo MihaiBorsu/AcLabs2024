@@ -1,0 +1,26 @@
+Neața tuturor 😃
+
+Astăzi de la 14:00 pana la 17:00 o sa avem laboratorul de “Scripting with Linux and GIT”.
+
+Laboratorul o sa aibă o structura destul de permisiva cu speranța sa va încurajez sa faceți in paralel cu mine execuția comenzilor sau sa puneți întrebări pe subiect.
+1.	Basic Linux terminal training
+2.	Basic GIT commands and training
+3.	Basic Bash and Make syntax and commands
+4.	Setting up and running some projects
+5.	Questions, answers and examples.
+
+
+Pentru a lucra in paralel cu mine (daca vreți) veți avea nevoie doar de un terminal de Linux cu comenzile de baza instalate (git nano python3 make gcc).
+Pentru utilizatorii de Windows va recomand cu căldura WSL 1 (WSL2 are probleme de DNS, evitai-l momentan 😝), eu pe WSL voi rula comenzile.
+Pentru instalare :
+https://docs.microsoft.com/en-us/windows/wsl/install-win10 sau https://www.windowscentral.com/install-windows-subsystem-linux-windows-10
+
+
+De altfel, menționez pentru claritate, mediul meu de dezvoltare folosește aceste proiecte, care NU TREBUIE pentru laborator:
+-	https://github.com/microsoft/terminal terminal de Windows pentru multi-tab , suport pentru Emoji si configurare mai avansata
+-	https://github.com/ohmyzsh/ohmyzsh proiect pentru a face mai fluenta navigarea in terminal, oferă culori frumoase si scurtături la comenzi
+-	https://code.visualstudio.com/ editorul pe care îl voi folosii
+
+
+Best regards,
+Adrian Mogoi

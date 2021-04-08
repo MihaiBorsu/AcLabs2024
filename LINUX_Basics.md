@@ -6,15 +6,15 @@
 
 ```TAB key``` - Used to fill up (autocomplete) the remaining parts in terminal. Example: “cd Doc” and then TAB and the terminal fills the rest up and makes it “cd Documents”.
 
-```Ctrl```+```C``` can be used to stop any command in terminal safely. If it doesn't stop with that, then ```Ctrl```+```Z``` can be used to force stop it.
+```Ctrl```+```C``` can be used to stop any command in terminal safely.
 
 ```exit``` - command used to close a terminal
 
 ```reboot```, ```halt``` - reboot or power off the computer (the commands required priviledge access).
 
-```Shift key``` + ```PageUP key```  or ```Shift key``` + ```PageDOWN key``` - Used to navigate on the screen terminal, up or down 
+```Shift key``` + ```PageUP key```  or ```Shift key``` + ```PageDOWN key``` - Used to navigate on the screen terminal, up or down
 
-```Up key``` and ```Down key``` - Used to navigate through the commands. 
+```Up key``` and ```Down key``` - Used to navigate through the commands.
 
 #### Basic Commands
 
@@ -30,7 +30,7 @@
 
 ```popd``` - taking out of the list the directories and doing also ```cd``` to that directory
 
-```dirs``` - print the list directories created with ```pushd```  
+```dirs``` - print the list directories created with ```pushd```
 
  ```mkdir & rmdir``` — Use the mkdir command when you need to create a folder or a directory. For example, if you want to make a directory called “DIY”, then you can type ```mkdir DIY```. Remember, as told before, if you want to create a directory named ```DIY Hacking```, then you can type ```mkdir DIY\ Hacking```. Use rmdir to delete a directory. But rmdir can only be used to delete an empty directory. To delete a directory containing files, use ```rm```.
 
@@ -53,10 +53,10 @@
  ```cat``` — Use the cat command to display the contents of a file. It is usually used to easily view programs.
 
  ```diff``` - differences between the content of different files
- 
+
  ```touch``` - Creates empty files
 
- ```nano```, ```vi``` — nano and vi are already installed text editors in the Linux command line. The nano command is a good text editor that denotes keywords with color and can recognize most languages. And vi is simpler than nano. You can create a new file or modify a file using this editor. 
+ ```nano```, ```vi``` — nano and vi are already installed text editors in the Linux command line. The nano command is a good text editor that denotes keywords with color and can recognize most languages. And vi is simpler than nano. You can create a new file or modify a file using this editor.
 
  ```sudo``` — A widely used command in the Linux command line, sudo stands for "SuperUser Do". So, if you want any command to be done with administrative or root privileges, you can use the sudo command.
 
@@ -70,19 +70,19 @@
 
   ```uname``` — Use uname to show the information about the system your Linux distro is running. Using the command “uname -a” prints most of the information about the system. This prints the kernel release date, version, processor type, etc.
 
-  ```chmod``` — Use chmod to make a file executable and to change the permissions granted to it in Linux. 
+  ```chmod``` — Use chmod to make a file executable and to change the permissions granted to it in Linux.
 
   ```hostname``` — Use hostname to know your name in your host or network. Basically, it displays your hostname and IP address. Just typing “hostname” gives the output. Typing in “hostname -I” gives you your IP address in your network.
 
   ```ping``` — Use ```ping``` to check your connection to a server.
-  
+
   ```passwd``` - Changing username password
 
 #### Search files and content of the files
 
   ```find``` - Find specific files (Attributes : -name = specify the name of the file, -type = type can be file (f) or directory (d), -user = owner of the files, -size = size of the file, -perm = permissions of the files, -maxdepth = maximum search depth inside a directory, -print = print on screen the search result,  -executable = the file to be executable, -exec = execute a command using the results provided by find command)
 
- ```grep``` – Use to search data inside the content of a file ( Attributes: -i = insensitive search, -v = skip the results having a matching pattern, -R = recursively search)  
+ ```grep``` – Use to search data inside the content of a file ( Attributes: -i = insensitive search, -v = skip the results having a matching pattern, -R = recursively search)
 
 #### File operations
 
@@ -90,11 +90,11 @@
 
 ```>>```  - Append operator (concatenate the content)
 
-```|``` - Pipeline is a sequence of processes chained together by their standard streams, so that the output of each process (stdout) feeds directly as input (stdin) to the next one.     
+```|``` - Pipeline is a sequence of processes chained together by their standard streams, so that the output of each process (stdout) feeds directly as input (stdin) to the next one.
 
-```cut``` – Remove sections from each line of files 
+```cut``` – Remove sections from each line of files
 
-```tr```– Translate or delete characters from standard input   
+```tr```– Translate or delete characters from standard input
 
 ```more```, ```less``` - List the content of a file in normal and reverse order or depending on first screen full of output
 
@@ -105,11 +105,11 @@
 
 ```ls [East,West]*``` - List all files starting with East and West
 
-```ls *{2013..2015}``` - List all files having the end 2013, 2014 and 2015 
+```ls *{2013..2015}``` - List all files having the end 2013, 2014 and 2015
 
 ```ls [HC][A-Z][0-9][0-9]???``` - list all files starting with H or C, then with any letter from A to Z, then any number from 0 to 9, then again any number from 0 to 9 and ??? means 3 characters
 
-```~``` - Represents the user home directory  Example: if you are logged as user1 and his home directory is ```/home/user1```, this directory can be referred as ```~.``` 
+```~``` - Represents the user home directory  Example: if you are logged as user1 and his home directory is ```/home/user1```, this directory can be referred as ```~.```
 
-```.``` - Represents the current path 
+```.``` - Represents the current path
 

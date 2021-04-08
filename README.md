@@ -22,6 +22,5 @@ Questions, answers and examples.
 ## Trainers
 
 - Adrian Mogoi (Mo)
-- CIprian Dima (Cip)
 
 
