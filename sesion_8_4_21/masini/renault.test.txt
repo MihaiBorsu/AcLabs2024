@@ -1,0 +1,17 @@
+total 28
+34058472182026865 drwxr-xr-x 1 root root 4096 Apr  7 14:56 .
+  562949953588443 drwxrwxrwx 1 root root 4096 Apr  8 14:27 ..
+98234766872238487 drwxr-xr-x 1 root root 4096 Apr  8 15:01 .git
+ 6192449487915123 -rw-r--r-- 1 root root  247 Apr  7 13:30 .gitignore
+ 8162774324893592 -rw-r--r-- 1 root root 3564 Apr  8 08:57 Bash_Basics.md
+29836347531614113 drwxr-xr-x 1 root root 4096 Apr  7 13:30 GIT
+12666373952267939 -rw-r--r-- 1 root root 5146 Apr  8 08:57 GIT_Basics.md
+18858823439902378 -rw-r--r-- 1 root root 9521 Apr  8 11:39 LINUX_Basics.md
+ 6755399441344919 drwxr-xr-x 1 root root 4096 Apr  7 13:30 Linux_commands
+13792273859111815 -rw-r--r-- 1 root root 1325 Apr  8 08:57 Makefile_basics.md
+22236523160431587 -rw-r--r-- 1 root root  486 Apr  8 13:36 README.md
+ 1125899907145109 drwxr-xr-x 1 root root 4096 Apr  7 13:30 sesion_30_4_20
+59109745109261691 drwxr-xr-x 1 root root 4096 Apr  8 14:55 sesion_8_4_21
+ 7318349394779727 drwxr-xr-x 1 root root 4096 Apr  7 14:45 some_c_make_proj
+ 9288674231755362 drwxr-xr-x 1 root root 4096 Apr  7 13:30 some_python_client_sserver
+63331869759906498 drwxr-xr-x 1 root root 4096 Apr  7 13:53 when_changed
