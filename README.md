@@ -8,9 +8,9 @@ A Linux/Unix terminal like Windows 10 with Linux subsystem, a Linux OS or a Mac.
 
 ## Topics
 
-Basic Linux terminal training
-
 Basic GIT commands and training
+
+Basic Linux terminal training
 
 Basic Bash and Make syntax and commands
 
