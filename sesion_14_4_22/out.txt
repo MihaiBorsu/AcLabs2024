@@ -1,0 +1,176 @@
+1c1
+< # Scripting with Linux and GIT
+---
+> # Bash Basics
+4c4
+< Basic training to get you started with scripting in Linux and how to setup a efficient workspace to run and test your projects.
+---
+> ## Resources
+6,7c6
+< ## Pre-requisites
+< A Linux/Unix terminal like Windows 10 with Linux subsystem, a Linux OS or a Mac.
+---
+> https://github.com/LeCoupa/awesome-cheatsheets/blob/master/languages/bash.sh
+9c8
+< ## Topics
+---
+> https://devhints.io/bash
+11c10
+< Basic GIT commands and training
+---
+> https://wiki.bash-hackers.org/syntax/pe
+13c12
+< Basic Linux terminal training
+---
+> ## List of basic commands
+15c14,15
+< Basic Bash and Make syntax and commands
+---
+> ##### Script with shebang, variables and quotes
+>     #!/usr/bin/env bash
+17c17,20
+< Setting up and running some projects
+---
+>     NAME="John"
+>     echo $NAME       #=> John
+>     echo "$NAME"     #=> John
+>     echo "${NAME}"   #=> John
+19c22,23
+< Questions, answers and examples.
+---
+>     echo "Hi $NAME"  #=> Hi John
+>     echo 'Hi $NAME'  #=> Hi $NAME
+20a25
+> ##### Conditional execution and exit codes
+22c27,152
+< ## Trainers
+---
+>     true  ; echo $?  #=> 0
+>     false ; echo $?  #=> 1
+> 
+>     true  && echo YES || echo NO  #=> YES
+>     false && echo Yes || echo No  #=> No
+> 
+>     true  && echo Yes || echo No ; echo $?  #=> Yes 0
+>     false && echo Yes || echo No ; echo $?  #=> No 0 #TODO why?
+> 
+>     if true; then
+>         echo YES
+>     else
+>         echo NO
+>     fi
+>     echo $?
+> 
+>     # [[ -z STRING ]]	Empty string
+>     # [[ -n STRING ]]	Not empty string
+>     # [[ STRING == STRING ]]	Equal
+>     # [[ STRING != STRING ]]	Not Equal
+>     # [[ -e FILE ]]	Exists
+>     # [[ -f FILE ]]	File
+>     # [[ -d FILE ]]	Directory
+>     # [[ STRING =~ STRING ]]	Regexp
+>     # (( NUM < NUM ))	Numeric conditions
+>     # [[ X ]] && [[ Y ]]	And
+>     # [[ X ]] || [[ Y ]]	Or
+> 
+> 
+> ##### Shell execution and functions
+> 
+>     echo "current dir: `pwd`"
+>     echo "current dir: $(pwd)"
+> 
+>     echo "root contents: $(ls -al /)"
+> 
+>     function great() {
+>         if [[ -z "$1" ]]; then
+>             echo "No name provided"
+>         elif [[ -n "$1" ]]; then
+>             echo "Hello, $1"
+>         fi
+>     }
+> 
+>     echo "$(great)"
+>     echo "$(great Adrian)"
+> 
+> 
+> 
+> 
+> ##### Changing variables
+> 
+>     STR="HELLO WORLD!"
+>     echo ${STR,}   #=> "hELLO WORLD!" (lowercase 1st letter)
+>     echo ${STR,,}  #=> "hello world!" (all lowercase)
+> 
+>     STR="hello world!"
+>     echo ${STR^}   #=> "Hello world!" (uppercase 1st letter)
+>     echo ${STR^^}  #=> "HELLO WORLD!" (all uppercase)
+> 
+>     # ${FOO%suffix}	Remove suffix
+>     # ${FOO#prefix}	Remove prefix
+>     # ${FOO%%suffix}	Remove long suffix
+>     # ${FOO##prefix}	Remove long prefix
+>     # ${FOO/from/to}	Replace first match
+>     # ${FOO//from/to}	Replace all
+>     # ${FOO/%from/to}	Replace suffix
+>     # ${FOO/#from/to}	Replace prefix
+> 
+> 
+> ##### LÖÖPS BRØTHER
+> 
+>     # Basic for loop
+>     for i in /dev/ttyS?; do
+>         echo $i
+>     done
+> 
+>     # C-like for loop
+>     for ((i = 0 ; i < 100 ; i++)); do
+>         echo $i
+>     done
+> 
+>     # Range loop
+>     for i in {1..5}; do
+>         echo "Welcome $i"
+>     done
+> 
+>     # Reading lines
+>     cat GIT_Basics.md | while read line; do
+>         echo $line
+>     done
+> 
+> 
+> 
+> 
+> 
+> 
+> ##### Arrays
+> 
+>     # Defining arrays
+>     Fruits=('Apple' 'Banana' 'Orange')
+>     Fruits[0]="Apple"
+>     Fruits[1]="Banana"
+>     Fruits[2]="Orange"
+> 
+>     # Working with arrays
+>     echo ${Fruits[0]}           # Element #0
+>     echo ${Fruits[@]}           # All elements, space-separated
+>     echo ${#Fruits[@]}          # Number of elements
+>     echo ${#Fruits}             # String length of the 1st element
+>     echo ${#Fruits[3]}          # String length of the Nth element
+>     echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
+> 
+>     # Operations
+>     Fruits=("${Fruits[@]}" "Watermelon")    # Push
+>     Fruits+=('Watermelon')                  # Also Push
+>     Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
+>     unset Fruits[2]                         # Remove one item
+>     Fruits=("${Fruits[@]}" "${Fruits[@]}")  # Duplicate
+>     Fruits=("${Fruits[@]}" "${Veggies[@]}") # Concatenate
+>     lines=(`cat "logfile"`)                 # Read from file
+> 
+>     # Iteration
+>     for i in "${arrayName[@]}"; do
+>         echo $i
+>     done
+24,25d153
+< - Adrian Mogoi (Mo)
+< - Mihai BORSU
