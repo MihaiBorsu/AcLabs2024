@@ -1,0 +1,23 @@
+Salut tuturor! :)
+
+Mâine de la 14:00 pana la 17:00 o sa avem laboratorul de “Scripting with Linux and GIT”. Vă propun să ne conectăm însă (dacă vreți) de la 13:45 pentru a socializa puțin înainte de laborator :)
+Ar trebui să fii primit deja invitație pe MS Teams de la Florin pentru mâine de la 14, dacă cumva nu o vedeți sau aveți probleme de conectare scrieți-mi și o să vă generez un link de conectare.
+
+Laboratorul o sa aibă următoarea structură:
+1.	Basic Linux terminal training
+2.	Basic GIT commands training
+3.	Basic Bash and Make syntax and commands
+4.	Setting up and running some C and Python projects
+5.	Questions, answers and examples.
+
+Pe parcursul laboratorului vom construi împreună un script (sau poate mai multe) care să înglobeze comenziile învățate, iar la finalul laboratorului veți avea ocazia să abordați singuri acasă câteva teme mai provocatoare.
+
+Pentru a lucra in paralel cu mine (daca vreți) veți avea nevoie doar de un terminal de Linux cu comenzile de baza instalate (git nano python3 make gcc).
+Pentru utilizatorii de Windows va recomand WSL, dar se poate folosi și o mașină virtuală sau alte soluții atâta timp cât puteți porni un terminal și aveți comenzile de bază instalate.
+Pentru instalare :
+https://docs.microsoft.com/en-us/windows/wsl/ sau https://www.windowscentral.com/install-windows-subsystem-linux-windows-10
+
+Ne vedem online mâine!
+
+Best regards,
+Mihai BORȘU

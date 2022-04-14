@@ -22,5 +22,6 @@ Questions, answers and examples.
 ## Trainers
 
 - Adrian Mogoi (Mo)
+- Mihai BORSU
 
 
