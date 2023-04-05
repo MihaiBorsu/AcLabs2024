@@ -1,0 +1,32 @@
+Date and time: 05.04.2023 2PM
+Name of the laboratory: Scripting with Linux and Git
+Place: Nokia Garage
+Duration: 3h
+Materials needed: Maybe a whiteboard and some markers
+Lab goals:
+    - Participants will know at least 5 basic Linux commands
+    - Participants will know how to create a Hello World bash Script
+    - Participants will know the basic 5 bash scripting semnatics 
+      (shebang, conditional executions, functions, variables, for loops)
+    - Participants will know how to clone, commit, push, merge and rebase using Git
+Activity timeline:
+    - 5' Introduction, welcome at Nokia MN lab.
+    - 15' Short lets know each other game. We have a toy and we pass it from person to person. 
+      Each time the toy gets to someone new he/she has to say his/her name, his/her faculty and year and
+      in case of robot/AI apocalypse what item would he/she found most valuable and why
+    - 10' Environment check. Everyone opens up their laptops and the linux terminal. 
+      Please check that git, bash, python3 is working
+    - 5' Short Linux commands presentation
+    - 25' Linux assignment (15 minutes work, 10 debugging)
+    - 5' Short Bash scripting presantation
+    - 20' Bash assignment (10 minutes work, 10 debugging)
+    - 10' Git short presentation
+    - 30' Git assignment (20 minutes work, 10 debugging)
+    - 30' Other questions, open discussion time.
+        - What are those actually used for.
+        - What am I actually doing at work.
+        - How does a day for a student look in my team.
+    - 10' Recap & Feedback.
+        - What have we done today?
+        - Name a few things that you remember after the lab
+        - How did you felt at the lab?
