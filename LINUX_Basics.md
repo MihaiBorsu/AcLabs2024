@@ -113,3 +113,10 @@
 
 ```.``` - Represents the current path
 
+
+Creati-va un director
+- Creati inca 100 de fisiere in acel director care sa se numeasca de la 1 la 100
+- Scrieti in fiecare dintre aceste fisiere "AC LAbs e Cool"
+- Cautam in tot file system-ul fisierele care au in denumire fix 2 cifre
+- Faceti o comanda care sa ne afiseze numarul de linii dintr-un fisier si creati un alias.
+

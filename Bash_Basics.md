@@ -52,6 +52,8 @@ https://wiki.bash-hackers.org/syntax/pe
     # [[ X ]] && [[ Y ]]	And
     # [[ X ]] || [[ Y ]]	Or
 
+    [[ ]]
+    [ ]
 
 ##### Shell execution and functions
 
@@ -150,6 +152,12 @@ https://wiki.bash-hackers.org/syntax/pe
     for i in "${arrayName[@]}"; do
         echo $i
     done
+
+    facem un script in care:
+    - adaugan shebang la inceput
+    - cream doua functii, una ia ca si parametru denumirea unui fisier si verifca daca acesta exista sau nu. Cealallta ia o variabila ca si parametru in care se afla un numar si returneaza dublul acestuia.
+    - apelam aceaste functii intr-o alta functie main si pasam parametri din consola functiei main
+    - declaram o variablila globala pe care o testam dupa un regex (sa respecte regex-ul) iar mai apoi afisam exit code-ul de la test.
 
 
 
