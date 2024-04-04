@@ -42,3 +42,6 @@ GIT tasks:
 - Create a second new branch <your_name>/branch2
 - cherry pick the last commit on <your_name>/branch1 into <your_name>/branch2
 
+BASH tasks:
+- Create a script to list all the directories named with the first parameter given. 
+- Check if the containing files have the executable permission and if not grant it.
