@@ -1,4 +1,4 @@
-Date and time: 05.04.2023 2PM
+Date and time: 02.04.2024 2PM
 Name of the laboratory: Scripting with Linux and Git
 Place: Nokia Garage
 Duration: 3h
@@ -45,3 +45,12 @@ GIT tasks:
 BASH tasks:
 - Create a script to list all the directories named with the first parameter given. 
 - Check if the containing files have the executable permission and if not grant it.
+
+Final task:
+- Create an automation using Bash and git to sync 2 different file paths.
+- The idea is to have this sync in between 2 diffrent computers, but for exercise it works also with 2 paths
+- Each path will have a local git repo
+- Both local git repos will point to a single remote (one github repo)
+- You can use crontab to automate a check if there has been modified files in the path
+- if there has been modified files commit and push them automatically
+- Think of a way to periodically sync local repos with the remote (crontab and git pull maybe?)
