@@ -30,3 +30,15 @@ Activity timeline:
         - What have we done today?
         - Name a few things that you remember after the lab
         - How did you felt at the lab?
+
+GIT tasks:
+- Clone AC Labs repository
+- Modify a file, add it to git and commit it locally
+- Check if the commit happened (what is the hash?)
+- Point the HEAD to the previous commit ("delete the last commit")
+- Create your own branch <your_name>/branch1
+- Modify a file, add and commit to git locally
+- Merge your change to master
+- Create a second new branch <your_name>/branch2
+- cherry pick the last commit on <your_name>/branch1 into <your_name>/branch2
+
